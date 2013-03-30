@@ -41,9 +41,9 @@
 <hr>
 <g:img alt="RAMM:Designs" class="logo" dir="images" file="img/login_registration/userloginheader.png" />
 <hr>
+<div id="large_error" role="status">${flash.message}</div>
 <br>
 <!-- Top Content -->
-
    <g:form action="login" name="loginForm">
    <p class="info">
         Please login with your username and password. <br />

@@ -16,7 +16,7 @@ class User {
     String lastName
     String username
     String password       
-
+    String role = "Member"
     
 
  
@@ -24,9 +24,9 @@ class User {
     static constraints = {
         firstName blank:false;
         lastName  blank:false;
-        username  blank:false, size:5..15, matches:/[\S]+/, unique:true
-        password  blank:false, size:5..15, matches:/[\S]+/
-        
+        username  blank:false, size:5..15, matches:/[\S]+/, unique:true;
+        password  blank:false, size:5..15, matches:/[\S]+/;
+        role(inList:["Member", "Admin"])
     }
 
 

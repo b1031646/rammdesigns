@@ -11,6 +11,10 @@ modules = {
     }
 
 
+   application2 {
+        resource url:'js/application.js'
+    }
+
 
 }
 

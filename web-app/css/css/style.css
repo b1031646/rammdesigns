@@ -81,6 +81,12 @@ font-size: 12px;
 font-family: Tahoma, Verdana, Arial;
 }
 
+div#large_error {
+color: #ff0000; 
+font-size: 22px;
+font-weight: bold!important;
+font-family: Tahoma, Verdana, Arial;
+}
 
 /* Container, content */
 div#flash_message {
@@ -485,7 +491,7 @@ ul.work_list li {
 ul.work_list li div.work_preview  {
     background: #fff;
     position: relative;
-margin-bottom: -25px;
+margin-bottom: -15px;
 }
 
 ul.work_list li img {

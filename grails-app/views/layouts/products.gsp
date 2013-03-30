@@ -49,11 +49,11 @@
     <p class="portfolio">PRODUCTS EXPLAINATION</p>
     
     </div>
-    
+    <br>
     <ul class="work_list">
         
         <li>
-        <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="Work image" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
+        <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
             <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
         </div>
            
@@ -71,7 +71,7 @@
         </li>
         
         <li class="last_img">
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="Work image" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
+             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
             <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
         </div>
            
@@ -89,7 +89,7 @@
         </li>
         
         <li>
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="Work image" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
+             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
             <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
         </div>
            
@@ -107,7 +107,7 @@
         </li>
         
         <li class="last_img">
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="Work image" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
+             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
             <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
         </div>
            
@@ -125,7 +125,7 @@
         </li>
         
         <li>
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="Work image" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
+             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
             <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
         </div>
            
@@ -141,7 +141,7 @@
 
         </li>
         <li class="last_img">
-        <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="Work image" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
+        <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
             <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
         </div>
           

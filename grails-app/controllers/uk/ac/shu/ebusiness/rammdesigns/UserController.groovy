@@ -4,6 +4,21 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class UserController {
 
+
+def beforeInterceptor = [action:this.&auth, 
+                           except:["login", "signup", "logout"]]
+
+  def auth() {
+    if( !(session?.user?.role == "Admin") ){
+      flash.message = "You must be an administrator to perform that task."
+      redirect(action:"login")
+      return false
+    }
+  }
+
+
+
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
