@@ -34,3 +34,11 @@
 	<g:textField name="password" maxlength="15" pattern="${userInstance.constraints.password.matches}" required="" value="${userInstance?.password}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'role', 'error')} ">
+	<label for="role">
+		<g:message code="user.role.label" default="Role" />
+		
+	</label>
+	<g:select name="role" from="${userInstance.constraints.role.inList}" value="${userInstance?.role}" valueMessagePrefix="user.role" noSelection="['': '']"/>
+</div>
+

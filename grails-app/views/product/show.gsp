@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="category-label" class="property-label"><g:message code="product.category.label" default="Category" /></span>
 					
-						<span class="property-value" aria-labelledby="category-label"><g:link controller="category" action="show" id="${productInstance?.category?.id}">${productInstance?.category?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="category-label"><g:fieldValue bean="${productInstance}" field="category"/></span>
 					
 				</li>
 				</g:if>
@@ -64,15 +64,6 @@
 					<span id="dateCreated-label" class="property-label"><g:message code="product.dateCreated.label" default="Date Created" /></span>
 					
 						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${productInstance?.dateCreated}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${productInstance?.lastUpdated}">
-				<li class="fieldcontain">
-					<span id="lastUpdated-label" class="property-label"><g:message code="product.lastUpdated.label" default="Last Updated" /></span>
-					
-						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${productInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

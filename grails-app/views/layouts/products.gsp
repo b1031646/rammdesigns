@@ -53,13 +53,14 @@
     <ul class="work_list">
         
         <li>
-        <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
-            <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
+        <div class="work_preview">
+            
         </div>
            
         <div class="work_info">
  
-        <div class="work_preview"><g:link controller="home" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/logodesign.png"/></g:link>
+        <div class="work_preview"><g:link controller="product" action="logo_design"  class="transition" ><g:img alt="" dir="images"  		file="img/product-tiles/large/logodesign.png"/></g:link>
+	<g:link controller="product" action="logo_design"  class="transition" ><img alt="" class="view" src="img/linz.png" /></g:link>
            
         </div>
 <br>
@@ -71,14 +72,12 @@
         </li>
         
         <li class="last_img">
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
-            <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
-        </div>
+             <div class="work_preview"></div>
            
         <div class="work_info">
  
-        <div class="work_preview"><g:link controller="home" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/bannerdesign.png"/></g:link>
-           
+        <div class="work_preview"><g:link controller="product" action="banner_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/bannerdesign.png" /></g:link>
+           <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link> 
         </div>
 <br>
     <p>View our different banner design packages and make your company’s products and services stand out from the crowd. Typical banners are used for advertising through the Google AdWords network and other advertising networks.</p>
@@ -89,13 +88,12 @@
         </li>
         
         <li>
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
-            <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
-        </div>
+             <div class="work_preview"></div>
            
         <div class="work_info">
         
-        <div class="work_preview"><g:link controller="home" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/posterdesign.png"/></g:link>
+        <div class="work_preview"><g:link controller="product" action="poster_design" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/large/posterdesign.png" /></g:link>
+        <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>
 <br>
@@ -107,13 +105,12 @@
         </li>
         
         <li class="last_img">
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
-            <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
-        </div>
+             <div class="work_preview"></div>
            
         <div class="work_info">
  
-        <div class="work_preview"><g:link controller="home" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/businesscarddesign.png"/></g:link>
+        <div class="work_preview"><g:link controller="product" action="business_card_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/businesscarddesign.png" /></g:link>
+        <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>
 <br>
@@ -125,13 +122,12 @@
         </li>
         
         <li>
-             <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
-            <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
-        </div>
+             <div class="work_preview"></div>
            
         <div class="work_info">
 
-        <div class="work_preview"><g:link controller="home" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/socialmediadesign.png"/></g:link>
+        <div class="work_preview"><g:link controller="product" action="social_media_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/socialmediadesign.png" /></g:link>
+        <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>
 <br>
@@ -141,13 +137,12 @@
 
         </li>
         <li class="last_img">
-        <div class="work_preview"><a class="transition" href="view_work.htm"><g:img alt="" height="0" dir="images" file="img/portfolio/preview/1.png" /></a>
-            <a class="transition" href="view_work.htm"><img alt="" class="view" src="img/linz.png" /></a>
-        </div>
+        <div class="work_preview"></div>
           
         <div class="work_info">
         
-        <div class="work_preview"><g:link controller="home" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/needsomethingelse.png"/></g:link>
+        <div class="work_preview"><g:link controller="home" action="index" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/large/needsomethingelse.png" /></g:link>
+        <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>
 <br>

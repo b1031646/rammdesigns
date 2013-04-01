@@ -30,11 +30,9 @@
 					
 						<g:sortableColumn property="filePath" title="${message(code: 'product.filePath.label', default: 'File Path')}" />
 					
-						<th><g:message code="product.category.label" default="Category" /></th>
+						<g:sortableColumn property="category" title="${message(code: 'product.category.label', default: 'Category')}" />
 					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'product.dateCreated.label', default: 'Date Created')}" />
-					
-						<g:sortableColumn property="lastUpdated" title="${message(code: 'product.lastUpdated.label', default: 'Last Updated')}" />
 					
 					</tr>
 				</thead>
@@ -51,8 +49,6 @@
 						<td>${fieldValue(bean: productInstance, field: "category")}</td>
 					
 						<td><g:formatDate date="${productInstance.dateCreated}" /></td>
-					
-						<td><g:formatDate date="${productInstance.lastUpdated}" /></td>
 					
 					</tr>
 				</g:each>

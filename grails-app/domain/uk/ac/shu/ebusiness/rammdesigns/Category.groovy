@@ -14,7 +14,7 @@ class Category {
 
 
 
-	Set products
+	
 
 
 	String toString() {
@@ -22,9 +22,7 @@ class Category {
    	 }
 
 
-	static hasMany = [products: Product]
-  
- 	static mappedBy = [products: "category"]
+
 
 
     static constraints = {

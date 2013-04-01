@@ -18,7 +18,6 @@ def beforeInterceptor = [action:this.&auth,
 
 
 
-
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -188,36 +187,6 @@ def login(LoginCommand cmd) {
         session.invalidate()
         redirect(controller:'home')
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

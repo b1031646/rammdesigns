@@ -1,5 +1,6 @@
 package uk.ac.shu.ebusiness.rammdesigns
 
+import grails.orm.PagedResultList
 import org.springframework.dao.DataIntegrityViolationException
 
 class CategoryController {
@@ -99,4 +100,13 @@ class CategoryController {
             redirect(action: "show", id: id)
         }
     }
+
+
+
+ // Category Work //
+
+
+
+
+
 }

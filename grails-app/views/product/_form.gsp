@@ -26,11 +26,11 @@
 	<g:textField name="filePath" pattern="${productInstance.constraints.filePath.matches}" required="" value="${productInstance?.filePath}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: productInstance, field: 'category', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: productInstance, field: 'category', 'error')} ">
 	<label for="category">
 		<g:message code="product.category.label" default="Category" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="category" name="category.id" from="${uk.ac.shu.ebusiness.rammdesigns.Category.list()}" optionKey="id" required="" value="${productInstance?.category?.id}" class="many-to-one"/>
+	<g:select name="category" from="${productInstance.constraints.category.inList}" value="${productInstance?.category}" valueMessagePrefix="product.category" noSelection="['': '']"/>
 </div>
 

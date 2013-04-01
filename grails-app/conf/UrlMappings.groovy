@@ -11,7 +11,7 @@ class UrlMappings {
 		}
 
 		
-    "/showCategory/$categoryName"(controller:'category', action:'show')
+   
 
 
 

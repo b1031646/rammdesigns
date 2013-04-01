@@ -100,27 +100,27 @@
     <div class="best_work">
     <h3>Our Expertise</h3>
     
-    <div><g:link controller="home" action="products" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/logodesign.png" /></g:link>
-        <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images" file="img/linz.png" /></g:link>
+    <div><g:link controller="product" action="logo_design"  class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/logodesign.png" /></g:link>
+        <g:link controller="product" action="logo_design" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div><g:link controller="home" action="products" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/bannerdesign.png" /></g:link>
+    <div><g:link controller="product" action="banner_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/bd.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div class="last_img"><g:link controller="home" action="products" class="transition" ><g:img alt="" dir="images" file="img/product-tiles/posterdesign.png" /></g:link>
+    <div class="last_img"><g:link controller="product" action="poster_design" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/posterdesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div><g:link controller="home" action="products" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/businesscarddesign.png" /></g:link>
+    <div><g:link controller="product" action="business_card_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/businesscarddesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div><g:link controller="home" action="products" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/socialmediadesign.png" /></g:link>
+    <div><g:link controller="product" action="social_media_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/socialmediadesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div class="last_img"><g:link controller="home" action="products" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/needsomethingelse.png" /></g:link>
+    <div class="last_img"><g:link controller="home" action="index" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/needsomethingelse.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     

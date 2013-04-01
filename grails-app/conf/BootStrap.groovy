@@ -34,34 +34,35 @@ def init = {servletContext ->
 
 	
 	// In Logo Category //
-	def Product_Logo1 = lookupOrCreateProduct('Logo1', 'Logo1Desc', 'img/team/colledge.png',Category_Logo )
-	def Product_Logo2 = lookupOrCreateProduct('Logo2', 'Logo2Desc', 'img/team/colledge.png',Category_Logo )
-	def Product_Logo3 = lookupOrCreateProduct('Logo3', 'Logo3Desc', 'img/team/colledge.png',Category_Logo )
-	def Product_Logo4 = lookupOrCreateProduct('Logo4', 'Logo4Desc', 'img/team/colledge.png',Category_Logo )
+	def Product_Logo1 = lookupOrCreateProduct('Logo1', 'Logo1Desc', 'img/team/colledge.png','LogoDesign' )
+	def Product_Logo2 = lookupOrCreateProduct('Logo2', 'Logo2Desc', 'img/team/colledge.png','LogoDesign' )
+	def Product_Logo3 = lookupOrCreateProduct('Logo3', 'Logo3Desc', 'img/team/colledge.png','LogoDesign' )
+	def Product_Logo4 = lookupOrCreateProduct('Logo4', 'Logo4Desc', 'img/team/colledge.png','LogoDesign' )
+	def Product_Logo5 = lookupOrCreateProduct('LOGO_NEW', 'THANK FUCK FOR THAT :D', 'img/team/colledge.png','LogoDesign' )
 
 	// In Banner Category //
-	def Product_Banner1 = lookupOrCreateProduct('Banner1', 'Banner1Desc', 'img/team/colledge.png',Category_Banner )
-	def Product_Banner2 = lookupOrCreateProduct('Banner2', 'Banner2Desc', 'img/team/colledge.png',Category_Banner )
-	def Product_Banner3 = lookupOrCreateProduct('Banner3', 'Banner3Desc', 'img/team/colledge.png',Category_Banner )
-	def Product_Banner4 = lookupOrCreateProduct('Banner4', 'Banner4Desc', 'img/team/colledge.png',Category_Banner )
+	def Product_Banner1 = lookupOrCreateProduct('Banner1', 'Banner1Desc', 'img/team/colledge.png','BannerDesign' )
+	def Product_Banner2 = lookupOrCreateProduct('Banner2', 'Banner2Desc', 'img/team/colledge.png','BannerDesign' )
+	def Product_Banner3 = lookupOrCreateProduct('Banner3', 'Banner3Desc', 'img/team/colledge.png','BannerDesign' )
+	def Product_Banner4 = lookupOrCreateProduct('Banner4', 'Banner4Desc', 'img/team/colledge.png','BannerDesign' )
 
 	// In Poster Category //
-	def Product_Poster1 = lookupOrCreateProduct('Poster1', 'Poster1Desc', 'img/team/colledge.png',Category_Poster)
-	def Product_Poster2 = lookupOrCreateProduct('Poster2', 'Poster2Desc', 'img/team/colledge.png',Category_Poster )
-	def Product_Poster3 = lookupOrCreateProduct('Poster3', 'Poster3Desc', 'img/team/colledge.png',Category_Poster )
-	def Product_Poster4 = lookupOrCreateProduct('Poster4', 'Poster4Desc', 'img/team/colledge.png',Category_Poster )
+	def Product_Poster1 = lookupOrCreateProduct('Poster1', 'Poster1Desc', 'img/team/colledge.png','PosterDesign')
+	def Product_Poster2 = lookupOrCreateProduct('Poster2', 'Poster2Desc', 'img/team/colledge.png','PosterDesign' )
+	def Product_Poster3 = lookupOrCreateProduct('Poster3', 'Poster3Desc', 'img/team/colledge.png','PosterDesign' )
+	def Product_Poster4 = lookupOrCreateProduct('Poster4', 'Poster4Desc', 'img/team/colledge.png','PosterDesign' )
 
 	// In Business Card Category //
-	def Product_Business1 = lookupOrCreateProduct('Business1', 'Business1Desc', 'img/team/colledge.png',Category_BusinessCard)
-	def Product_Business2 = lookupOrCreateProduct('Business2', 'Business2Desc', 'img/team/colledge.png',Category_BusinessCard )
-	def Product_Business3 = lookupOrCreateProduct('Business3', 'Business3Desc', 'img/team/colledge.png',Category_BusinessCard)
-	def Product_Business4 = lookupOrCreateProduct('Business4', 'Business4Desc', 'img/team/colledge.png',Category_BusinessCard )
+	def Product_Business1 = lookupOrCreateProduct('Business1', 'Business1Desc', 'img/team/colledge.png','BusinessCardDesign')
+	def Product_Business2 = lookupOrCreateProduct('Business2', 'Business2Desc', 'img/team/colledge.png','BusinessCardDesign' )
+	def Product_Business3 = lookupOrCreateProduct('Business3', 'Business3Desc', 'img/team/colledge.png','BusinessCardDesign')
+	def Product_Business4 = lookupOrCreateProduct('Business4', 'Business4Desc', 'img/team/colledge.png','BusinessCardDesign' )
 
 	// In Social Media Category //
-	def Product_Social1 = lookupOrCreateProduct('Social1', 'Social1Desc', 'img/team/colledge.png',Category_SocialMedia )
-	def Product_Social2 = lookupOrCreateProduct('Social2', 'Social2Desc', 'img/team/colledge.png',Category_SocialMedia )
-	def Product_Social3 = lookupOrCreateProduct('Social3', 'Social3Desc', 'img/team/colledge.png',Category_SocialMedia )
-	def Product_Social4 = lookupOrCreateProduct('Social4', 'Social4Desc', 'img/team/colledge.png',Category_SocialMedia )
+	def Product_Social1 = lookupOrCreateProduct('Social1', 'Social1Desc', 'img/team/colledge.png','SocialMediaDesign' )
+	def Product_Social2 = lookupOrCreateProduct('Social2', 'Social2Desc', 'img/team/colledge.png','SocialMediaDesign' )
+	def Product_Social3 = lookupOrCreateProduct('Social3', 'Social3Desc', 'img/team/colledge.png','SocialMediaDesign' )
+	def Product_Social4 = lookupOrCreateProduct('Social4', 'Social4Desc', 'img/team/colledge.png','SocialMediaDesign' )
 
 
 
