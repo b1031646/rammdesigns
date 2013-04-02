@@ -41,7 +41,10 @@
 
 <!-- Top Content -->
 <div class="main_content">
-
+<hr>
+<g:img alt="" class="transition" dir="images/img/page_headers/" file="contactus.png" />
+<hr>
+<br>
     <iframe width="900" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="google-map-iframe" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Norton,+Sheffield,+S5+9NU,+UK&amp;sll=53.800651,-4.064941&amp;sspn=4.192254,57.084961&amp;ie=UTF8&amp;hq=&amp;hnear=Sheffield,+South+Yorkshire+S5+9NU,+United+Kingdom&amp;ll=53.432447,-1.481781&amp;spn=0.073635,0.404434&amp;z=11&amp;iwloc=near&amp;output=embed"></iframe> 
      
     <div id="about_page">

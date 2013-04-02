@@ -42,19 +42,15 @@
 
 <!-- Top Content -->
 <div class="main_content">
- <div id="about_page">
-
-    <h2 class="portfolio">Meet Our Team</h2>
-    
-    <p class="portfolio">Meet our friendly team of highly skilled staff who have over 20 years of experience between them. We use the Adobe Creative Suite to develop our work, which is a professional and industry-standard software suite. We also use a detailed planning procedure to make sure the end product is tailored exactly to your needs.</p>
-    
-    </div>
+<hr>
+<g:img alt="" class="transition" dir="images/img/page_headers/" file="meetourteam.png" />
+<hr>
+<br>
+<p>Meet our friendly team of highly skilled staff who have over 20 years of experience between them. We use the Adobe Creative Suite to develop our work, which is a professional and industry-standard software suite. We also use a detailed planning procedure to make sure the end product is tailored exactly to your needs.</p>
 
     <div class="our_team">
-        
         <div class="member">
         <g:img dir="images" file="img/team/team_large/colledge.png" title="RAMM Employee" alt="Matt"/>
-        
         <div class="team_info">
         
         <h2>Matthew Colledge</h2>

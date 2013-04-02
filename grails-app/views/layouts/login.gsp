@@ -39,7 +39,7 @@
 </div>
 
 <hr>
-<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/login_registration/userloginheader.png" />
+<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/page_headers/userloginheader.png" />
 <hr>
 <div id="large_error" role="status">${flash.message}</div>
 <br>

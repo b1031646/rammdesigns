@@ -41,15 +41,11 @@
 
 <!-- Top Content -->
 <div class="main_content">
+<hr>
+<g:img alt="" class="transition" dir="images/img/page_headers/" file="products.png" />
+<hr>
+<br>
 
-    <div id="about_page">
-
-    <h2 class="portfolio">Our Products</h2>
-    
-    <p class="portfolio">PRODUCTS EXPLAINATION</p>
-    
-    </div>
-    <br>
     <ul class="work_list">
         
         <li>

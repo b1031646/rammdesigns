@@ -16,8 +16,8 @@ class Product {
 	String productName
 	String productDescription
 	String filePath
-	String category = "LogoDesign"
-
+	String category = "Logo Design"
+	Double price
 	
 	String toString() {
         return productName
@@ -27,11 +27,12 @@ class Product {
 
 	
     static constraints = {
-	productName blank:false, unique:true, maxSize:30;
+	productName blank:false, unique:true, maxSize:50;
         productDescription blank:false;	
 	filePath blank:false, matches:/[\S]+/;	
-	category(inList:["LogoDesign", "BannerDesign", "PosterDesign", "BusinessCardDesign", "SocialMediaDesign"])
-	productName blank:false;
+	category(inList:["Logo Design", "Banner Design", "Poster Design", "Business Card Design", "Social Media Design"])
+	category blank:false;
+	price blank:false;
     }
 
 	static mapping = {

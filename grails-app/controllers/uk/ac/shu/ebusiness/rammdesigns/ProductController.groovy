@@ -104,75 +104,27 @@ class ProductController {
 
 //PRODUCT WORK //
 
-def logo_design() {
+def category() {
 
+
+	// List all products in requested category //
 
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
  
      def testList = Product.findAll {
-    category == 'LogoDesign'
+    category == "${params.category}"
 }
  
         [testInstanceList: testList]
+
+
+
+	
+
 
 	
     }
 
  
-def banner_design() {
 
-
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-     def testList = Product.findAll {
-    category == 'BannerDesign'
-}
- 
-        [testInstanceList: testList]
-
-	
-    }
-
-def poster_design() {
-
-
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-     def testList = Product.findAll {
-    category == 'PosterDesign'
-}
- 
-        [testInstanceList: testList]
-
-	
-    }
-
-
-def business_card_design() {
-
-
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-     def testList = Product.findAll {
-    category == 'BusinessCardDesign'
-}
- 
-        [testInstanceList: testList]
-
-	
-    }
-
-def social_media_design() {
-
-
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-     def testList = Product.findAll {
-    category == 'SocialMediaDesign'
-}
- 
-        [testInstanceList: testList]
-
-	
-    }
 }

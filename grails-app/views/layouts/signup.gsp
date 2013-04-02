@@ -46,7 +46,7 @@
 
 <!-- Registration Area logo -->
 <hr>
-<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/login_registration/userregistrationheader.png" />
+<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/page_headers/userregistrationheader.png" />
 <hr>
 
 <!-- Code to show errors during registration -->

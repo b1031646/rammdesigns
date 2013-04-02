@@ -3,7 +3,9 @@
 
 <title>RAMM Designs | Home</title>
 
-    <% /*  Resources Links for CSS/JS Files */ %>
+
+<!-- Resources Links for CSS/JS Files -->
+ 
     <g:layoutHead/>
 <swfobject:resources />
     <r:require module="application"/>
@@ -82,6 +84,7 @@
       swfobject.embedSWF("<g:createLink controller="binary" action="loop" id="1" />", "myId", "100%", "100%", "9.0.0", "<swfobject:expressInstallSWF />", flashvars);
    });
 </script>
+
 <object type="video/webm" data="http://www.hiddenagenda.dj/top_banner.swf" width="595" height="200">
   <param name="src" value="http://www.hiddenagenda.dj/top_banner.swf" />
 <param name='uiMode' value='invisible' >
@@ -100,23 +103,23 @@
     <div class="best_work">
     <h3>Our Expertise</h3>
     
-    <div><g:link controller="product" action="logo_design"  class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/logodesign.png" /></g:link>
+    <div><g:link controller="product" action="category" id="${params.category}" params="[category: 'Logo Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/logodesign.png" /></g:link>
         <g:link controller="product" action="logo_design" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div><g:link controller="product" action="banner_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/bd.png" /></g:link>
+    <div><g:link controller="product" action="category" id="${params.category}" params="[category: 'Banner Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/bd.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div class="last_img"><g:link controller="product" action="poster_design" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/posterdesign.png" /></g:link>
+    <div class="last_img"><g:link controller="product" action="category" id="${params.category}" params="[category: 'Poster Design']" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/posterdesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div><g:link controller="product" action="business_card_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/businesscarddesign.png" /></g:link>
+    <div><g:link controller="product" action="category" id="${params.category}" params="[category: 'Business Card Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/businesscarddesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div><g:link controller="product" action="social_media_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/socialmediadesign.png" /></g:link>
+    <div><g:link controller="product" action="category" id="${params.category}" params="[category: 'Social Media Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/socialmediadesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     

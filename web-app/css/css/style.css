@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    font-family: Tahoma, Verdana, Arial;
+    font-family: Arial, Arial, Helvetica, sans-serif;
     background: url(../img/bg_pat.png) #fff;
     background-attachment: fixed;
 }
@@ -26,6 +26,7 @@ h3 {
     font-weight: normal!important;
     height: 20px;
 }
+
 
 h1 {
     font-size: 23px;
@@ -74,18 +75,112 @@ input[type="text"]:focus, textarea:focus {
     border-color: #59a0ba;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* Custom Product/Category Div */
+
+
+
+.product_category_wrapper {
+	float: none;
+	height: 110px;
+	width: 900px;
+	
+	word-wrap: break-word;
+}
+#product_category_wrapper #image {
+	float: left;
+	height: 110px;
+	width: 200px;
+	clear: none;
+}
+#product_category_wrapper #imageTitle {
+	clear: none;
+	float: left;
+	width: 570px;
+	height: 20px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+#product_category_wrapper #price {
+	float: right;
+	width: 90px;
+	clear: right;
+	height: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
+	
+}
+#product_category_wrapper #description {
+	height: 60px;
+	width: 570px;
+	clear: none;
+	float: left;
+	padding: 15px;
+}
+#product_category_wrapper #moreInfo {
+	float: right;
+	width: 90px;
+	clear: none;
+	height: 45px;
+	left: 673px;
+	top: 0px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 0px;
+	margin-top:25px;
+	
+}
+
+
+
+
+
 /* Errors*/
+.break-word {
+  word-wrap: break-word;
+}
+
+
+div#product_category {
+    width: 700px;
+
+vertical-align:text-top;
+position:relative;
+
+
+}
+
+div#float_top {
+height: auto;
+float: top;
+display:inline;
+position: relative;
+}
+
+
+
+
 div#errors {
 color: #ff0000; 
 font-size: 12px;
-font-family: Tahoma, Verdana, Arial;
+font-family: Arial, Arial, Helvetica, sans-serif;
 }
 
 div#large_error {
 color: #ff0000; 
 font-size: 22px;
 font-weight: bold!important;
-font-family: Tahoma, Verdana, Arial;
+font-family: Arial, Arial, Helvetica, sans-serif;
 }
 
 /* Container, content */
@@ -94,7 +189,7 @@ div#flash_message {
 color: #ff0000;
 width: auto;
 font-size: 12px;
-font-family: Tahoma, Verdana, Arial;
+font-family: Arial, Arial, Helvetica, sans-serif;
 }
 div#login {
 
@@ -446,7 +541,7 @@ div.team_info {
 }
 
 div.our_team {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 div.our_team div.member {
@@ -807,7 +902,7 @@ form.comments textarea {
     padding-left: 15px;
     padding-top: 15px;
     margin-top: 20px;
-    font-family: Tahoma, Verdana, Arial;
+    font-family: Arial, Arial, Helvetica, sans-serif;
     font-size: 12px;
     border: 1px solid #abadb3;
 }
@@ -876,7 +971,7 @@ form.contact_form textarea {
     padding-left: 15px;
     padding-top: 15px;
     margin-top: 20px;
-    font-family: Tahoma, Verdana, Arial;
+    font-family: Arial, Arial, Helvetica, sans-serif;
     font-size: 12px;
     border: 1px solid #abadb3;
 }
