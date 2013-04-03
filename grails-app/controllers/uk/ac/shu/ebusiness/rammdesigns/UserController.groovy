@@ -6,7 +6,7 @@ class UserController {
 
 
 def beforeInterceptor = [action:this.&auth, 
-                           except:["login", "signup", "logout"]]
+                           except:["login", "signup", "logout", "my_account"]]
 
   def auth() {
     if( !(session?.user?.role == "Admin") ){
@@ -189,7 +189,9 @@ def login(LoginCommand cmd) {
     }
 
 
+def admin_area(){}
 
+def my_account(){}
 
 
 
