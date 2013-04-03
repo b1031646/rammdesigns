@@ -45,7 +45,7 @@
 ADMIN AREA
 <hr>
 <br>
-<g:link controller="user" action="list" class="transition">Show Users</g:link>   ||   <g:link controller="user" action="create" class="transition">Add User</g:link>   ||   <g:link controller="product" action="list" class="transition">Show Products</g:link>   ||   <g:link controller="product" action="create" class="transition">Add Products</g:link><br>				
+<g:link controller="user" action="list" class="transition">USER</g:link>   ||   <g:link controller="product" action="list" class="transition">PRODUCT</g:link>   ||  <g:link controller="subscription" action="list" class="transition">SUBSCRIPTION</g:link>  ||  <g:link controller="contact" action="list" class="transition">CONTACT FORM</g:link><br>				
 
 <!-- CUSTOM CODE -->
 

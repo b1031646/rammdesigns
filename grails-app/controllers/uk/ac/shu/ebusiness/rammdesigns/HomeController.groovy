@@ -2,40 +2,71 @@ package uk.ac.shu.ebusiness.rammdesigns
 
 class HomeController {
 
+
+	// Index page containing subscribe functionality //
+
 	def index() { 
-	[:]
+
+	if(request.method == 'POST') {
+
+	def s = new Subscription()
+
+	s.properties['name', 'email'] = params
+
+	if(s.save()) {
+
+	flash.message = "You have successfully subscribed. Thank you."
+
+	redirect controller:"home"
+
+	} else {
+
+	return [subscription:s]
+
+	}
+	}
 	}
 
-	def about() {
-        [:]
-    	}
 
- 	def contact() {
-        [:]
+	def contact() {
+
+	if(request.method == 'POST') {
+
+	def c = new Contact()
+
+	c.properties['name', 'email','message'] = params
+
+	if(c.save()) {
+
+	flash.message = "Your message has been sent. We will be in touch shortly."
+
+	redirect(controller:"home", action:"contact")
+
+	} else {
+
+	return [contact:c]
+
+	}
+	}
 	}
 
- 	def view_post() {
-        [:]
-	}
 
-	def products() {
-        [:]
-	}
 
-	def product_list() {
-        [:]
-	}
+	// Page Links //
 
-	def team() {
-        [:]
-	}
+	def about() {}
 
-	def view_work() {
-        [:]
-	}
+ 	def view_post() {}
+
+	def products() {}
+
+	def product_list() {}
+
+	def team() {}
+
+	def view_work() {}
 	
 
-	
 
 
 
@@ -67,6 +98,7 @@ class HomeController {
 	redirect(url: "http://en.wikipedia.org/wiki/RSS")
 	}
 	
+
 	
 	//Contact Page//		
 		
@@ -75,7 +107,15 @@ class HomeController {
 	}
 
 	def video() {
-redirect(url: "https://www.dropbox.com/s/xag5mro32geukur/Banner%20-%201.mp4")
+	redirect(url: "https://www.dropbox.com/s/xag5mro32geukur/Banner%20-%201.mp4")
   
-}
+	}
+
+
+
+
+
+
+
+
 }

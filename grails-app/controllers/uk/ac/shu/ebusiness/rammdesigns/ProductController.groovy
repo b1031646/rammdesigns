@@ -5,8 +5,10 @@ import org.springframework.dao.DataIntegrityViolationException
 class ProductController {
 
 
+	// Before Interceptor that restricts access to Admin users only //
+
 def beforeInterceptor = [action:this.&auth, 
-                           except:["category"]]
+                           except:["category", "detail"]]
 
   def auth() {
     if( !(session?.user?.role == "Admin") ){
@@ -16,6 +18,9 @@ def beforeInterceptor = [action:this.&auth,
     }
   }
 
+
+
+	// Code for scaffolded interfaces //
 
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -116,29 +121,40 @@ def beforeInterceptor = [action:this.&auth,
 
 
 
-//PRODUCT WORK //
+	//PRODUCT WORK //
+
 
 def category() {
 
 
-	// List all products in requested category //
+	// List all products in requested category e.g All products in the banner category //
 
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
  
      def testList = Product.findAll {
     category == "${params.category}"
-}
+	}
  
         [testInstanceList: testList]
 
 
-
-	
-
-
-	
     }
 
- 
+	// Show details of a selected product on the product_detail page //
+
+    def detail(Long id) {
+        def productInstance = Product.get(id)
+        if (!productInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'product.label', default: 'Product'), id])
+            redirect(action: "detail")
+            return
+        }
+
+        [productInstance: productInstance]
+    }
+	
+
+
+
 
 }

@@ -40,11 +40,22 @@
 
 
 <!-- Top Content -->
-<div class="main_content">
+
 <hr>
 <g:img alt="" class="transition" dir="images/img/page_headers/" file="${params.category}.png" />
-</p>
 <hr>
+<div class="main_content">
+<p id="category_nav">
+<FONT COLOR="#1a3b42">Categories: <g:link controller="product" action="category"  params="[category: 'Logo Design']" class="transition" >Logo Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Banner Design']" class="transition" >Banner Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Poster Design']" class="transition" >Poster/Leaflet Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Business Card Design']" class="transition" >Business Card Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Social Media Design']" class="transition" >Social Media Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Logo Design']" class="transition" >Need Something Else</g:link>  /<br>
+</font>
+</p>
+</div>
+<br>
 <br>
 
 
@@ -61,18 +72,19 @@
   <tr>
 <div class="product_category_wrapper" id="product_category_wrapper">
   <div id="image"><g:img alt="" class="transition" dir="images/img/product-images/small/" file="${fieldValue(bean: testInstance, field: "filePath")}" /></div>
-  <div id="imageTitle"><b><g:link action="show" id="${testInstance.id}">${fieldValue(bean: testInstance, field: "productName")}</g:link></b></div>
-  <div id="description">${fieldValue(bean: testInstance, field: "productDescription")}
+  <div id="imageTitle"><b><g:link action="detail" id="${testInstance.id}">${fieldValue(bean: testInstance, field: "productName")}</g:link></b></div>
+  <div id="description"><p>${fieldValue(bean: testInstance, field: "productDescription")}</p>
 </div>
   <div id="moreInfo">£${fieldValue(bean: testInstance, field: "price")}</div>
-  <div id="price"><g:link action="show" id="${testInstance.id}"><g:img alt="" class="transition" dir="images/img/more_info/" file="more_info.png" /></g:link></div>
+  <div id="price"><g:link action="detail" id="${testInstance.id}"><g:img alt="" class="transition" dir="images/img/more_info/" file="more_info.png" /></g:link></div>
 </div>
 
 
 
   </tr>
 
-
+<g:img alt="" class="transition" dir="images/img/product-images/" file="divider.png" /><br>
+<br>
 </table>
 
 

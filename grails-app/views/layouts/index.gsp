@@ -19,6 +19,26 @@
 
 <body id="home">
 
+
+
+<g:if test="${subscription?.name}">
+     <body onLoad="document.subscriptionForm.subscribe.focus()">
+</g:if>
+<g:if test="${subscription?.email}">
+     <body onLoad="document.subscriptionForm.subscribe.focus()">
+</g:if>
+<g:if test="${subscription?.name == ''}">
+     <body onLoad="document.subscriptionForm.subscribe.focus()">
+</g:if>
+<g:if test="${subscription?.email == ''}">
+     <body onLoad="document.subscriptionForm.subscribe.focus()">
+</g:if>
+<g:if test="${flash.message == 'You have successfully subscribed. Thank you.'}">
+     <body onLoad="document.subscriptionForm.subscribe.focus()">
+</g:if>
+
+
+
 <div id="container">
 <div id="login">
 <p><h3><g:loginControl/></h3></p>
@@ -140,7 +160,25 @@
     <div class="info_clients">
        <p> <h3>Previous Clients</h3></p>
 <br>
-        <p><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/previousclients.png" /></p>
+ <div class="main_img">
+<script type="text/javascript">
+   $(document).ready(function() {
+      var flashvars = {
+         scriptURL: 'http://www.hiddenagenda.dj/ramm_logo_rollover.swf'
+      };
+      swfobject.embedSWF("<g:createLink controller="binary" action="loop" id="1" />", "myId", "100%", "100%", "9.0.0", "<swfobject:expressInstallSWF />", flashvars);
+   });
+</script>
+
+
+
+<object type="video/webm" data="http://www.hiddenagenda.dj/ramm_logo_rollover.swf" width="900" height="200">
+  <param name="src" value="http://www.hiddenagenda.dj/ramm_logo_rollover.swf" />
+<param name='uiMode' value='visible' >
+<param name='controls' value='visible' >
+</object>
+</div> 
+</div>       
     </div>
    
 </div>
@@ -207,25 +245,49 @@
         </div>
 
     </div>
-    
-    
-    
+
     <div class="subscription">
         <h3>Subscription</h3>
-        <p>CONTENT HERE</p>
+        <p>Sign up to our mailing list to receive the latest news, offers and information from the world of RAMM Designs. </p>
+
+
+        <g:form action="index" name="subscriptionForm">
         
-        <form method="post" action="">
-        
-        <input class="autoclear" type="text" size="15" name="name" value="Your name" />
-        <input class="autoclear" type="text" size="15" name="mail" value="E-mail adress" />
-        <input type="submit" name="subscribe" value="Subscribe" />
-        
-        </form>
-        
+<input type="text" class="autoclear" name="name" value="Enter your name"/>
+<input type="text" class="autoclear" name="email" value="Enter your email"/>
+     
+
+
+<g:submitButton class="subscribeButton" name="subscribe" value="Subscribe"></g:submitButton>
+
+
+        </g:form>
+        <g:if test="${flash.message == 'You have successfully subscribed. Thank you.'}">
+     <div id ="success"> 
+<br>
+${flash.message}
+     <g:hasErrors bean="${subscription}">
+       <div class="errors">
+         <g:renderErrors bean="${subscription}"></g:renderErrors>
+       </div>
+     </g:hasErrors>
+</div>
+</g:if>
+
+<g:if test="${flash.message != 'You have successfully subscribed. Thank you.'}">
+<div id ="errors"> 
+<br>
+${flash.message}
+     <g:hasErrors bean="${subscription}">
+       <div class="errors">
+         <g:renderErrors bean="${subscription}"></g:renderErrors>
+       </div>
+     </g:hasErrors>
+</div>
+</g:if>
     </div>
     
 </div>
-
 
 
 <div id="footer">

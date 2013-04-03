@@ -71,18 +71,74 @@
 
     </div>
     
+	<!-- IF statements to control when to re-focus page on contact form -->
+
+
+<g:if test="${contact?.name}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+<g:if test="${contact?.email}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+<g:if test="${contact?.message}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+<g:if test="${contact?.name == ''}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+<g:if test="${contact?.email == ''}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+<g:if test="${contact?.message == ''}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+<g:if test="${flash.message == 'Your message has been sent. We will be in touch shortly.'}">
+     <body onLoad="document.contactForm.send.focus()">
+</g:if>
+
+
+
+	<!-- Contact Form -->
+
     
     <div class="contact_info">
-    <form class="contact_form" method="post" action="">
-        <h2>Write us a letter</h2>
-        <input type="text" class="autoclear" name="name" value="Enter your name"/> <br />
-        <input type="text" class="autoclear" name="mail" value="Enter your E-mail"/> <br />
-        <textarea cols="30" rows="15" name="message"></textarea>
+
+    <g:form class ="contact_form" action="contact" name="contactForm">
+
+        <h2>Send us a message...</h2>
+        <div id="errors"><input type="text" class="autoclear" name="name" value="Enter your name"/><g:renderErrors bean="${contact}" as="list" field="name"/></div> <br />
+        <div id="errors"><input type="text" class="autoclear" name="email" value="Enter your E-mail"/><g:renderErrors bean="${contact}" as="list" field="email"/></div> <br />
+        <div id="errors"><textarea cols="30" rows="15" name="message"></textarea><g:renderErrors bean="${contact}" as="list" field="message"/>
+
+	<!-- Contact Form Error & Success Messages -->
+
+	<!-- IF statement to show green success message  -->
+        
+        <g:if test="${flash.message == 'Your message has been sent. We will be in touch shortly.'}">
+     <div id ="success"> 
+<br>
+${flash.message}
+     <g:hasErrors bean="${contact}">
+       <div class="errors">
+         <g:renderErrors bean="${contact}"></g:renderErrors>
+       </div>
+     </g:hasErrors>
+</div>
+</g:if>
+
+
+</div>
+
         <div class="button_cont">
-        <input type="submit" value="Send" />
+
+        <g:submitButton class="contactButton" name="send" value="Send"></g:submitButton>
+
         </div>
-    </form>
+
+    </g:form>
     
+	<!-- Other Contacts -->
+
     <div class="other_contacts">
         <h2>Get in touch...</h2>
         <p>Need any more information? Get in touch and we will be happy to assist you...</p>
@@ -94,6 +150,8 @@
     
     </div>
       
+	<!-- Footer -->
+
 <div id="footer">
 <hr>
 <br>

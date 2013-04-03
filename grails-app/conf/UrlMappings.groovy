@@ -19,7 +19,10 @@ class UrlMappings {
         action = 'category'
     }
 
-
+  "/product_detail/" {
+        controller = 'product'
+        action = 'detail'
+    }
 
 
 

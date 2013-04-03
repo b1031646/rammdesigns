@@ -5,6 +5,8 @@ import org.springframework.dao.DataIntegrityViolationException
 class UserController {
 
 
+	// Before Interceptor that restricts access to Admin users only //
+
 def beforeInterceptor = [action:this.&auth, 
                            except:["login", "signup", "logout", "my_account"]]
 
@@ -17,6 +19,7 @@ def beforeInterceptor = [action:this.&auth,
   }
 
 
+	// Code for scaffolded interfaces //
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -116,82 +119,93 @@ def beforeInterceptor = [action:this.&auth,
 
 
 
+	// USER CONTROLLER WORK //
 
 
- // Registration //
+	// Page Links //
+	
+	def admin_area(){}
 
-def signup() {
-if(request.method == 'POST') {
-  def u = new User()
-  u.properties['username', 'password', 'firstName', 'lastName'] = params
-  if(u.password == params.username) {
-    u.errors.rejectValue("password", "user.password.same.as.username")
-    return [user:u]
-}
-  if(u.password != params.confirm) {
-    u.errors.rejectValue("password", "user.password.dontmatch")
-    return [user:u]
-    } else if(u.save()) {
-      session.user = u
-      redirect controller:"home"
-    } else {
-      return [user:u]
-    }
-  }
-}
+	def my_account(){}
 
 
 
-// Login //
+ 	// Registration //
 
-def login(LoginCommand cmd) {
-  if(request.method == 'POST') {
-    if(!cmd.hasErrors()) {
-      session.user = cmd.getUser()
-      redirect controller:'home'
-    } else {
-      render view:'/user/login', model:[loginCmd:cmd]
-    }
-  } else {
-    render view:'/user/login'
-  }
-}
-
-
-    class LoginCommand {
-      String username 
-      String password
-      private u
-      User getUser() {
-              if(!u && username) {
-                 u = User.findByUsername(username)
-              }
-              return u
-
-      }
-
-  static constraints = {
-                username blank:false, validator:{ val, obj ->
-                    if(!obj.user)
-                      return "user.not.found"
-                }
-                password blank:false, validator:{ val, obj ->
-                    if(obj.user && obj.user.password != val)
-                      return "user.password.invalid"
-                }
-  }
-}
+	def signup() {
+	if(request.method == 'POST') {
+	def u = new User()
+	u.properties['username', 'password', 'firstName', 'lastName'] = params
+	if(u.password == params.username) {
+	u.errors.rejectValue("password", "user.password.same.as.username")
+	return [user:u]
+	}
+	if(u.password != params.confirm) {
+	u.errors.rejectValue("password", "user.password.dontmatch")
+	return [user:u]
+	} else if(u.save()) {
+	session.user = u
+	redirect controller:"home"
+	} else {
+	return [user:u]
+	}
+	}
+	}
 
 
-  def logout = {
-        session.invalidate()
-        redirect(controller:'home')
-    }
+
+	// Login //
+
+	def login(LoginCommand cmd) {
+	if(request.method == 'POST') {
+	if(!cmd.hasErrors()) {
+	session.user = cmd.getUser()
+	redirect controller:'home'
+	} else {
+	render view:'/user/login', model:[loginCmd:cmd]
+	}
+	} else {
+	render view:'/user/login'
+	}
+	}
 
 
-def admin_area(){}
 
-def my_account(){}
+	// Part of the login script that checks if both username and password exist and then retrieves the user //
+
+	class LoginCommand {
+	String username 
+	String password
+	private u
+	User getUser() {
+	if(!u && username) {
+	u = User.findByUsername(username)
+	}
+	return u
+
+	}
+
+	static constraints = {
+	username blank:false, validator:{ val, obj ->
+	if(!obj.user)
+	return "user.not.found"
+	}
+	password blank:false, validator:{ val, obj ->
+	if(obj.user && obj.user.password != val)
+	return "user.password.invalid"
+	}
+	}
+	}
+
+
+	// Logout //
+
+	def logout = {
+	session.invalidate()
+	redirect(controller:'home')
+	}
+
+
 
 
 
