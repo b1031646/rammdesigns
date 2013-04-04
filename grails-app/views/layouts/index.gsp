@@ -14,7 +14,6 @@
     <r:layoutResources/>
 
 
-
 </head>
 
 <body id="home">
@@ -161,22 +160,38 @@
        <p> <h3>Previous Clients</h3></p>
 <br>
  <div class="main_img">
-<script type="text/javascript">
-   $(document).ready(function() {
-      var flashvars = {
-         scriptURL: 'http://www.hiddenagenda.dj/ramm_logo_rollover.swf'
-      };
-      swfobject.embedSWF("<g:createLink controller="binary" action="loop" id="1" />", "myId", "100%", "100%", "9.0.0", "<swfobject:expressInstallSWF />", flashvars);
-   });
-</script>
 
 
 
-<object type="video/webm" data="http://www.hiddenagenda.dj/ramm_logo_rollover.swf" width="900" height="200">
-  <param name="src" value="http://www.hiddenagenda.dj/ramm_logo_rollover.swf" />
-<param name='uiMode' value='visible' >
-<param name='controls' value='visible' >
-</object>
+<div class="wrapper">
+
+<div id = "imageone">
+<div id="Gameimage1"><img src="http://www.hiddenagenda.dj/ramm/Game1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Game2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Game1.png'" 
+style="cursor:pointer;" /></div>
+</div>
+
+<div id = "imageone">
+<div id = "Essoimage"><img src="http://www.hiddenagenda.dj/ramm/Esso1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Esso2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Esso1.png'" 
+style="cursor:pointer;" /></div>
+</div>
+
+<div id = "imageone">
+<div id = "Santanderimage"><img src="http://www.hiddenagenda.dj/ramm/Santander1.png" alt width="178" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Santander 2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Santander1.png'" /></div>
+</div>
+
+<div id = "imageone">
+<div id =  "BPimage"><img src="http://www.hiddenagenda.dj/ramm/BP1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/BP2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/BP1.png'" /></div>
+</div>
+
+<div id = "imageone">
+<div id = "VMimage"><img src="http://www.hiddenagenda.dj/ramm/VW1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/VW2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/VW1.png'" /></div>
+</div>
+</div>
+
+
+
+
+
 </div> 
 </div>       
     </div>

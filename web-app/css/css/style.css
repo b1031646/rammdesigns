@@ -85,6 +85,12 @@ input[type="text"]:focus, textarea:focus {
 }
 
 
+div#main_content {
+a:link {color:#4A96A6;}      
+a:visited {color:#250444;}  
+a:hover {color:#8F083E;}  
+}
+
 
 hr { display: block; height: 1px;
     border: 0; border-top: 1px solid #989796;
@@ -170,14 +176,70 @@ p#large_about{
 }
 
 
+/* Previous Client Rollovers */
 
 
 
-div#main_content {
-a:link {color:#4A96A6;}      
-a:visited {color:#250444;}  
-a:hover {color:#8F083E;}  
+.wrapper {
+	height: 200px;
+	width: 900px;
+	background-color:#CCC
+	
 }
+.wrapper #imageone {
+	width: 180px;
+	float: right;
+	height: 150px;
+	margin-top: 25px;
+}
+.wrapper #imageone #Gameimage1 {
+	margin-top: 50px;
+	margin-left: 12px;
+}
+.wrapper #imageone #Essoimage {
+	margin-top: 40px;
+	margin-left: 50px;
+}
+.wrapper #imageone #Santanderimage {
+	margin-top: 45px;
+	width: 150;
+}
+.wrapper #imageone #BPimage {
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.wrapper #imageone #VMimage {
+	margin-top: 25px;
+	margin-left: 35px;
+}
+
+.wrapper #imagetwo {
+	width: 180px;
+	float: right;
+}
+
+}
+.wrapper #imagethree {
+	width: 180px;
+	float: right;
+}
+
+
+.wrapper #imagefour {
+	width: 180px;
+	float: right;
+}
+
+.wrapper #imagefive {
+	width: 180px;
+	float: right;
+	
+}
+
+
+
+
+
 
 /* Category Navigation*/
 
@@ -330,7 +392,32 @@ div.main_img {
     height: 200px;
 }
 
-/* Latest from the gallery */
+
+/* About page social icons */
+
+div.small_social {
+    width: 250px;
+    float: center;
+padding-left:60px;
+
+}
+
+div.small_social h2 {
+    font-size: 12px;
+    color: #000;
+    font-weight: bold!important;
+    width: 50%;
+    height: 40px;
+}
+
+div.small_social div.latest_img {
+    display: block;
+    float: left;
+    margin: 6px 10px 0 0;
+}
+
+
+/* Homepage social icons */
 
 div.latest_gallery {
     width: 290px;
@@ -1068,11 +1155,11 @@ form.contact_form input[type="submit"]:active {
 
 div.other_contacts {
     margin-left: 550px;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 div.other_contacts p {
-    margin-top: 15px;
+    margin-top: 5px;
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #ddd;

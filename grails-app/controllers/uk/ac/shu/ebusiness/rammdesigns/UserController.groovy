@@ -135,15 +135,8 @@ def beforeInterceptor = [action:this.&auth,
 	def signup() {
 	if(request.method == 'POST') {
 	def u = new User()
-	u.properties['username', 'password', 'firstName', 'lastName'] = params
-	if(u.password == params.username) {
-	u.errors.rejectValue("password", "user.password.same.as.username")
-	return [user:u]
-	}
-	if(u.password != params.confirm) {
-	u.errors.rejectValue("password", "user.password.dontmatch")
-	return [user:u]
-	} else if(u.save()) {
+	u.properties['username', 'password', 'firstName', 'lastName', 'confirm'] = params
+	if(u.save()) {
 	session.user = u
 	redirect controller:"home"
 	} else {

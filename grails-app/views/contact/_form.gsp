@@ -7,7 +7,7 @@
 		<g:message code="contact.name.label" default="Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="name" maxlength="75" required="" value="${contactInstance?.name}"/>
+	<g:textField name="name"  size="34" maxlength="75" required="" value="${contactInstance?.name}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contactInstance, field: 'email', 'error')} required">
@@ -15,7 +15,7 @@
 		<g:message code="contact.email.label" default="Email" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textArea name="email" cols="40" rows="5" maxlength="255" required="" value="${contactInstance?.email}"/>
+	<g:textField name="email" size="34" maxlength="255" required="" value="${contactInstance?.email}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: contactInstance, field: 'message', 'error')} required">
@@ -23,6 +23,7 @@
 		<g:message code="contact.message.label" default="Message" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="message" required="" value="${contactInstance?.message}"/>
+	<g:textArea name="message" cols="40" rows="5" required="" value="${contactInstance?.message}"/>
+
 </div>
 

@@ -11,10 +11,38 @@
 		<a href="#list-product" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+
+
+<!-- Custom links for admin area -->
+
+<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/faq.png"/> FAQ</g:link></li>
+<li><g:link controller="subscription" action="list" class="transition"><g:img dir="images"  file="skin/subscription.png"/> Subscription</g:link></li>
+<li><g:link controller="contact" action="list" class="transition"><g:img dir="images"  file="skin/contact.png"/> Contact</g:link></li>
+<li><g:link controller="product" action="list" class="transition"><g:img dir="images"  file="skin/product.png"/> Product</g:link></li>
+<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/user.png"/> User</g:link></li>
+<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+<g:img dir="images"  file="img/page_headers/adminheader.png"/>
+
+</ul>
+</div>
+<hr>
+
+
+<div class="nav_new" role="navigation">
+<ul>
+
+<!-- Individual page control links -->
+
+<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+
 			</ul>
 		</div>
+
+
+<!-- Scaffolded Code -->
+
+
+
 		<div id="list-product" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -32,6 +60,8 @@
 					
 						<g:sortableColumn property="category" title="${message(code: 'product.category.label', default: 'Category')}" />
 					
+						<g:sortableColumn property="price" title="${message(code: 'product.price.label', default: 'Price')}" />
+					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'product.dateCreated.label', default: 'Date Created')}" />
 					
 					</tr>
@@ -47,6 +77,8 @@
 						<td>${fieldValue(bean: productInstance, field: "filePath")}</td>
 					
 						<td>${fieldValue(bean: productInstance, field: "category")}</td>
+					
+						<td>${fieldValue(bean: productInstance, field: "price")}</td>
 					
 						<td><g:formatDate date="${productInstance.dateCreated}" /></td>
 					

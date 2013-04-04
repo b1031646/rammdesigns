@@ -82,7 +82,7 @@
 
 
   </tr>
-
+<br>
 <g:img alt="" class="transition" dir="images/img/product-images/" file="divider.png" /><br>
 <br>
 </table>

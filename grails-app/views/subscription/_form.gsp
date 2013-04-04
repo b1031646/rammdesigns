@@ -7,7 +7,7 @@
 		<g:message code="subscription.name.label" default="Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="name" maxlength="75" required="" value="${subscriptionInstance?.name}"/>
+	<g:textField name="name" size ="34" maxlength="75" required="" value="${subscriptionInstance?.name}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: subscriptionInstance, field: 'email', 'error')} required">
@@ -15,6 +15,7 @@
 		<g:message code="subscription.email.label" default="Email" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textArea name="email" cols="40" rows="5" maxlength="255" required="" value="${subscriptionInstance?.email}"/>
+	<g:textField name="email" size ="34" maxlength="255" required="" value="${subscriptionInstance?.email}"/>
+	
 </div>
 

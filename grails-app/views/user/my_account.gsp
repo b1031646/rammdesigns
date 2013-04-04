@@ -42,14 +42,18 @@
 <!-- Top Content -->
 <div class="main_content">
 <hr>
+<g:img alt="" class="transition" dir="images/img/page_headers/" file="myaccount.png" />
+<hr>			
 
 
-				
-YOUR ACCOUNT
-			
+
+<br>
+<br>
+<br>
 
 
-<!-- CUSTOM CODE -->
+
+
 
 <div id="footer">
 <hr>

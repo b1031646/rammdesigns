@@ -1,72 +1,30 @@
+
+<%@ page import="uk.ac.shu.ebusiness.rammdesigns.User" %>
 <!DOCTYPE html>
-<head>	
-<title>RAMM Designs | ${params.category}</title>
+<html>
+	<head>
+		<meta name="layout" content="main">
+		<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
+		<title>RAMM Admin Panel: Home</title>
+	</head>
+	<body>
+		<div class="nav" role="navigation">
+			<ul>
 
-    <% /*  Resources Links for CSS/JS Files */ %>
-    
-    <r:require module="application"/>
-    <r:layoutResources/>
 
+<!-- Custom links for admin area -->
 
-</head>
+<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/faq.png"/> FAQ</g:link></li>
+<li><g:link controller="subscription" action="list" class="transition"><g:img dir="images"  file="skin/subscription.png"/> Subscription</g:link></li>
+<li><g:link controller="contact" action="list" class="transition"><g:img dir="images"  file="skin/contact.png"/> Contact</g:link></li>
+<li><g:link controller="product" action="list" class="transition"><g:img dir="images"  file="skin/product.png"/> Product</g:link></li>
+<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/user.png"/> User</g:link></li>
+<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+<g:img dir="images"  file="img/page_headers/adminheader.png"/>
 
-<body id="view_work">
-<div id="container">
-<div id="login">
-<p id="logintaglib"><g:loginControl/></p>
-</div>
-    <div class="stripe"></div>
-
-<div id="content">
-
-<!-- Header -->
-
-<div id="header">
-
-<div id="loader"><img alt="" src="img/ajax-loader.gif" /></div>
-
-<ul class="main_navi">
-    <li><g:link controller="home" action="index" class="transition">Home</g:link></li>
-        <li><g:link controller="home" action="products" class="transition">Products</g:link></li>
-	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
-        <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
-        <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
 </ul>
-
-<g:img alt="SimpleTape" class="logo" dir="images" file="img/logo.png" />
-
 </div>
 
 
 
-<!-- Top Content -->
-<div class="main_content">
-<hr>
-ADMIN AREA
-<hr>
-<br>
-<g:link controller="user" action="list" class="transition">USER</g:link>   ||   <g:link controller="product" action="list" class="transition">PRODUCT</g:link>   ||  <g:link controller="subscription" action="list" class="transition">SUBSCRIPTION</g:link>  ||  <g:link controller="contact" action="list" class="transition">CONTACT FORM</g:link><br>				
 
-<!-- CUSTOM CODE -->
-
-<div id="footer">
-<hr>
-<br>
-    &#169; RAMM Designs 2013. All rights reserved.
-    
-    <ul class="footer_navi">
-     <li><g:link controller="home" action="index" class="transition">Home</g:link></li>
-        <li><g:link controller="home" action="products" class="transition">Products</g:link></li>
-	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
-        <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
-        <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
-    </ul>
-
-</div>
-
-</div>
-</div>
-</div>
-<r:layoutResources/>	
-</body>
-</html>

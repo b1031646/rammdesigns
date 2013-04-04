@@ -22,9 +22,13 @@ class User {
 	String firstName
 	String lastName
 	String username
-	String password       
+	String password
+	String confirm       
 	String role = "Member"
-    
+    	
+
+	   // transients
+    static transients = ['confirm']
 
 	// toString() returns the product name instead of the id to make the scaffolded interfaces easier to work with //	
 	
@@ -37,14 +41,31 @@ class User {
 
 	static constraints = {
 	firstName blank:false;
+	confirm bindable: true;
 	lastName  blank:false;
-	username  blank:false, size:5..15, matches:/[\S]+/, unique:true;
-	password  blank:false, size:5..15, matches:/[\S]+/;
+
+
+	// Here we check to make sure the username is not the same as the password when registering a new user //
+
+	username  blank:false, size:5..15, matches:/[\S]+/, unique:true, validator:{ val, obj ->
+	 if (obj.username == obj.password)
+                return 'user.password.same.as.username'
+	}
+
+
 	role(inList:["Member", "Admin"])
+
+
+	// Here we check to make sure both passwords match before registration //
+
+	password  blank:false, size:5..15, matches:/[\S]+/, validator:{ val, obj ->
+	 if (obj.password != obj.confirm)
+                return 'user.password.dontmatch'
 	}
 
 
 
 
 
+}
 }

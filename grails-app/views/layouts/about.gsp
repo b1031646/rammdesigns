@@ -65,9 +65,19 @@ Our detailed consultation process allows us to understand the requirements of ou
         <h2>Our Mission...</h2>
         <p><i>“We offer professional and affordable design solutions, customised around you. Your idea, your vision, our promise. Welcome to a new way of thinking. RAMM - design solutions with clarity.”
 </i></p>
-        <div class="contact_item phone">0114 2675339</div>
-        <div class="contact_item mail">ramm.designs@gmail.com</div>
-        <div class="contact_item twitter"><a href="${createLink(action:'twitter', controller:'home')}" target="_blank">RAMM_Designs</a></div>
+            <div class="small_social">    
+
+
+
+
+        <div class="latest_img"><a href="${createLink(action:'facebook', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Facebook.png"/></a></div>
+        <div class="latest_img"><a href="${createLink(action:'twitter', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Twitter.png"/></a></div>
+        <div class="latest_img last_img"><a href="${createLink(action:'google', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Google.png"/></a></div>
+        
+        <div class="latest_img"><a href="${createLink(action:'youtube', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Youtube.png"/></a></div>
+        <div class="latest_img"><a href="${createLink(action:'pinterest', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Pinterest.png"/></a></div>
+        <div class="latest_img last_img"><a href="${createLink(action:'rss', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/RSS.png"/></a></div>
+    </div> 
     
     </div>
     

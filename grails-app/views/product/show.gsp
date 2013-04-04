@@ -11,11 +11,38 @@
 		<a href="#show-product" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+
+
+<!-- Custom links for admin area -->
+
+<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/faq.png"/> FAQ</g:link></li>
+<li><g:link controller="subscription" action="list" class="transition"><g:img dir="images"  file="skin/subscription.png"/> Subscription</g:link></li>
+<li><g:link controller="contact" action="list" class="transition"><g:img dir="images"  file="skin/contact.png"/> Contact</g:link></li>
+<li><g:link controller="product" action="list" class="transition"><g:img dir="images"  file="skin/product.png"/> Product</g:link></li>
+<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/user.png"/> User</g:link></li>
+<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+<g:img dir="images"  file="img/page_headers/adminheader.png"/>
+
+</ul>
+</div>
+<hr>
+
+
+<div class="nav_new" role="navigation">
+<ul>
+
+<!-- Individual page control links -->
+
+<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+
 			</ul>
 		</div>
+
+
+<!-- Scaffolded Code -->
+
+
 		<div id="show-product" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -55,6 +82,15 @@
 					<span id="category-label" class="property-label"><g:message code="product.category.label" default="Category" /></span>
 					
 						<span class="property-value" aria-labelledby="category-label"><g:fieldValue bean="${productInstance}" field="category"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${productInstance?.price}">
+				<li class="fieldcontain">
+					<span id="price-label" class="property-label"><g:message code="product.price.label" default="Price" /></span>
+					
+						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${productInstance}" field="price"/></span>
 					
 				</li>
 				</g:if>

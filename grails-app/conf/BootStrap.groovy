@@ -12,13 +12,13 @@ def init = {servletContext ->
 
 	// Add test Users //
 
-	def User_Admin = lookupOrCreateUser('Admin', 'Admin', 'admin', 'admin', 'Admin')
-	def User_Jade = lookupOrCreateUser('Alison', 'Roberts', 'alison', 'alison', 'Member')
-	def User_Jack = lookupOrCreateUser('Shaun', 'Daniels', 'shaun', 'shaun', 'Member')
-	def User_Dannielle = lookupOrCreateUser('Dannielle', 'Green', 'dannielle', 'dannielle', 'Member')
-	def User_James = lookupOrCreateUser('James', 'Atkinson', 'james', 'james', 'Member')
-	def User_Paul = lookupOrCreateUser('Jessica', 'Shaw', 'jessica', 'jessica', 'Member')
-	def User_Anne = lookupOrCreateUser('Matthew', 'Smith', 'matthew', 'matthew', 'Member')
+	def User_Admin = lookupOrCreateUser('Admin', 'Admin', 'admin', 'admin1', 'admin1', 'Admin')
+	def User_Jade = lookupOrCreateUser('Alison', 'Roberts', 'alison', 'alison1','alison1', 'Member')
+	def User_Jack = lookupOrCreateUser('Shaun', 'Daniels', 'shaun', 'shaun1','shaun1', 'Member')
+	def User_Dannielle = lookupOrCreateUser('Dannielle', 'Green', 'dannielle','dannielle1', 'dannielle1', 'Member')
+	def User_James = lookupOrCreateUser('James', 'Atkinson', 'james', 'james1','james1', 'Member')
+	def User_Paul = lookupOrCreateUser('Jessica', 'Shaw', 'jessica', 'jessica1','jessica1', 'Member')
+	def User_Anne = lookupOrCreateUser('Matthew', 'Smith', 'matthew', 'matthew1','matthew1', 'Member')
 
 	// Add test Categories //
 
@@ -107,8 +107,8 @@ def init = {servletContext ->
 
 		// User //
 
-	def lookupOrCreateUser (firstName,lastName,username,password,role){
-	def result = User.findByUsername(username) ?: new User (firstName: firstName, lastName: lastName, username: username, password: password, role: role).save();
+	def lookupOrCreateUser (firstName,lastName,username,password,confirm,role){
+	def result = User.findByUsername(username) ?: new User (firstName: firstName, lastName: lastName, username: username, password: password, confirm: confirm, role: role).save();
 	return result
 	}
 
