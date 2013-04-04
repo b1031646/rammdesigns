@@ -13,7 +13,7 @@
 <body id="portfolio">
 <div id="container">
 <div id="login">
-<p><h3><g:loginControl/></h3></p>
+<p id="logintaglib"><g:loginControl/></p>
 </div>
     <div class="stripe"></div>
 
@@ -55,7 +55,7 @@
            
         <div class="work_info">
  
-        <div class="work_preview"><g:link controller="product" action="logo_design"  class="transition" ><g:img alt="" dir="images"  		file="img/product-tiles/large/logodesign.png"/></g:link>
+        <div class="work_preview"><g:link controller="product" action="category" id="${params.category}" params="[category: 'Logo Design']" class="transition" ><g:img alt="" dir="images"  file="img/product-tiles/large/logodesign.png"/></g:link>
 	<g:link controller="product" action="logo_design"  class="transition" ><img alt="" class="view" src="img/linz.png" /></g:link>
            
         </div>
@@ -72,7 +72,7 @@
            
         <div class="work_info">
  
-        <div class="work_preview"><g:link controller="product" action="banner_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/bannerdesign.png" /></g:link>
+        <div class="work_preview"><g:link controller="product" action="category" id="${params.category}" params="[category: 'Banner Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/bannerdesign.png" /></g:link>
            <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link> 
         </div>
 <br>
@@ -88,7 +88,7 @@
            
         <div class="work_info">
         
-        <div class="work_preview"><g:link controller="product" action="poster_design" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/large/posterdesign.png" /></g:link>
+        <div class="work_preview"><g:link controller="product" action="category" id="${params.category}" params="[category: 'Poster Design']" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/large/posterdesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>
@@ -105,7 +105,7 @@
            
         <div class="work_info">
  
-        <div class="work_preview"><g:link controller="product" action="business_card_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/businesscarddesign.png" /></g:link>
+        <div class="work_preview"><g:link controller="product" action="category" id="${params.category}" params="[category: 'Business Card Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/businesscarddesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>
@@ -122,7 +122,7 @@
            
         <div class="work_info">
 
-        <div class="work_preview"><g:link controller="product" action="social_media_design" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/socialmediadesign.png" /></g:link>
+        <div class="work_preview"><g:link controller="product" action="category" id="${params.category}" params="[category: 'Social Media Design']" class="transition" ><g:img alt="" class="transition" dir="images" file="img/product-tiles/large/socialmediadesign.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>

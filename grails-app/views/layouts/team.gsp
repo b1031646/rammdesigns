@@ -14,7 +14,7 @@
 <body id="home">
 <div id="container">
 <div id="login">
-<p><h3><g:loginControl/></h3></p>
+<p id="logintaglib"><g:loginControl/></p>
 </div>
     <div class="stripe"></div>
 

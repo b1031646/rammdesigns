@@ -42,10 +42,10 @@ def init = {servletContext ->
 
 	// In Banner Category //
 	def Product_Banner1 = lookupOrCreateProduct('Static Banner', 'Make your company stand out online with our static web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords, which will help you to reach your potential clients easier. If you need an interactive banner making, see our other banner packages which will fulfil your needs.', 'static_banner.png','Banner Design',00.00 )
-	def Product_Banner2 = lookupOrCreateProduct('Flash Banner - 1 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords, which will help you to reach your potential clients easier. This package will cover a banner up to one minute in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '1min_banner.png','Banner Design',00.00 )
-	def Product_Banner3 = lookupOrCreateProduct('Flash Banner - 2 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords, which will help you to reach your potential clients easier. This package will cover a banner up to two minutes in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '2min_banner.png','Banner Design',00.00 )
-	def Product_Banner4 = lookupOrCreateProduct('Flash Banner - 3 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords, which will help you to reach your potential clients easier. This package will cover a banner up to three minutes in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '3min_banner.png','Banner Design',00.00 )
-	def Product_Banner5 = lookupOrCreateProduct('Flash Banner - 5 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords, which will help you to reach your potential clients easier. This package will cover a banner up to five minutes in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '5min_banner.png','Banner Design',00.00 )
+	def Product_Banner2 = lookupOrCreateProduct('Flash Banner - 1 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords. This package will cover a banner up to one minute in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '1min_banner.png','Banner Design',00.00 )
+	def Product_Banner3 = lookupOrCreateProduct('Flash Banner - 2 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords. This package will cover a banner up to two minutes in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '2min_banner.png','Banner Design',00.00 )
+	def Product_Banner4 = lookupOrCreateProduct('Flash Banner - 3 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords. This package will cover a banner up to three minutes in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '3min_banner.png','Banner Design',00.00 )
+	def Product_Banner5 = lookupOrCreateProduct('Flash Banner - 5 Minute or Less', 'Make your company stand out online with our animated and interactive Flash web banner. These are typically found on websites in various sizes. They are compatible with advertising networks such as Google Adwords. This package will cover a banner up to five minutes in length. If you need a longer banner duration, then choose a banner package with a longer duration.', '5min_banner.png','Banner Design',00.00 )
 
 	// In Poster Category //
 	def Product_Poster1 = lookupOrCreateProduct('A6 Poster - Single Sided', 'Make sure your company’s products, services or events stand out with our A6 single sided leaflets. These will fit in a pocket easily and make sure that your business gets noticed. Although we don’t handle printing in house, we have a number of recommended printers who will be happy to assist you.', 'A6_single.png','Poster Design',00.00)
@@ -73,6 +73,34 @@ def init = {servletContext ->
 
 
 
+
+	// Add test Subscriptions //
+
+	def Subscription_script1 = lookupOrCreateSubscription('Barry', 'BarryScott@AOL.com')
+	def Subscription_script2 = lookupOrCreateSubscription('Lisa', 'Lisa_89@yahoomail.com')
+	def Subscription_script3 = lookupOrCreateSubscription('Robert', 'Rob_will@googlemail.com')	
+	def Subscription_script4 = lookupOrCreateSubscription('Matthew', 'Matthew1992@live.com')
+	def Subscription_script5 = lookupOrCreateSubscription('Rose', 'Rose_red@gmail.com')
+	def Subscription_script6 = lookupOrCreateSubscription('Mike', 'mike@hotmail.com')
+	def Subscription_script7 = lookupOrCreateSubscription('Jamie', 'JB1982@btinternet.com')
+	def Subscription_script8 = lookupOrCreateSubscription('Harry', 'HarryHog@gmail.com')
+
+
+
+	// Add test Contact Submissions //
+
+	def Contact_Con1 = lookupOrCreateContact('Gina', 'Gina11@hotmail.com', 'Hello, just emailing to ask if you provide the vector image with my purchase? Regards Gina')
+	def Contact_Con2 = lookupOrCreateContact('Mary', 'Mary_bh@gmail.com', 'Hello, just wanted to thank Michael for the excellent vintage design for my leaflet. Best wishes Mary ')
+	def Contact_Con3 = lookupOrCreateContact('Gerry', 'g_erry@AOL.com', 'Hello, I am Gerry. Could you possibly do me a flash banner for over five minutes and if so what is the price?')
+	def Contact_Con4 = lookupOrCreateContact('Michael', 'M_K_Y@gmail.com', 'Hello, just wanted to know which version of Photoshop the team uses? Many thanks Mike')
+	def Contact_Con5 = lookupOrCreateContact('Kit', 'kit_09@hotmail.com', 'Hi, I am looking to purchase a service from China, can I pay in renminbi? Thank you Kit')
+	def Contact_Con6 = lookupOrCreateContact('Ken', 'KenHarrison@hotmail.com', 'Hi there, I am Ken, just emailing to ask if you do designs for Tumblr?')
+	def Contact_Con7 = lookupOrCreateContact('Larry', 'Larry-king@yahoomail.co.uk', 'Hello, RAMM, just wanted to thank you for your quick and professional work. I shall be coming back! Regards!')
+	def Contact_Con8 = lookupOrCreateContact('James', 'James_Low_99@live.co.uk', 'I still have a myspace account. Can you do myspace designs? Thank you James.')
+
+
+
+
 }
 
  
@@ -96,6 +124,22 @@ def init = {servletContext ->
 
 	def lookupOrCreateProduct (productName,productDescription,filePath,category,price){
 	def result = Product.findByProductName(productName) ?: new Product (productName: productName, productDescription: productDescription, filePath: filePath, category: category, price: price).save();
+	return result
+	}
+
+
+		// Subscriptions //
+
+	def lookupOrCreateSubscription (name,email){
+	def result = Subscription.findByEmail(email) ?: new Subscription (name: name, email: email).save();
+	return result
+	}
+
+
+		// Contact //
+
+	def lookupOrCreateContact (name,email,message){
+	def result = Contact.findByName(name) ?: new Contact (name: name, email: email, message: message).save();
 	return result
 	}
 

@@ -19,6 +19,7 @@ p {
     font-size: 13px;
     color: #7e7d7d;
     line-height: 19px;
+text-align: justify; 
 }
 
 c {
@@ -97,6 +98,20 @@ p#category_nav{
     color: #4A96A6;
     line-height: 10px;
 	
+}
+
+p#logintaglib{
+    font-size: 14px;
+    color: #4A96A6;
+    line-height: 18px;
+	padding-left:5px;
+}
+
+p#large_about{
+    font-size: 17px;
+    color: #7e7d7d;
+    line-height: 18px;
+	text-align: center; 
 }
 
 /* Custom Product/Category Div */
@@ -1071,6 +1086,7 @@ div.contact_item {
 
 div.contact_info {
     border-top: 1px solid #fff;
+	margin-top:-20px;
 }
 
 div.phone {

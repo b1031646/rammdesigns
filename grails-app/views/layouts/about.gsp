@@ -13,7 +13,7 @@
 <body id="portfolio">
 <div id="container">
 <div id="login">
-<p><h3><g:loginControl/></h3></p>
+<p id="logintaglib"><g:loginControl/></p>
 </div>
     <div class="stripe"></div>
 
@@ -44,34 +44,27 @@
 <hr>
 <g:img alt="" class="transition" dir="images/img/page_headers/" file="aboutus.png" />
 <hr>
-<div id="about_page">
-
-
+<br>
+<g:img alt="" class="transition" dir="images/img/about-us/" file="panoheader.png" /><br>
+<br>
 <p>
 RAMM understands the need for an exceptional graphic design service. We are different to other design companies because we operate like an online shop, allowing the customer to receive an honest buying experience with clear upfront costs. It is therefore not necessary to obtain a quote for most of our products before ordering. This is a time saving element of our service that benefits our customers.
 
-Our detailed consultation process allows us to understand the requirements of our clients. We make sure we liaise with you regularly throughout the design process to make sure our visions match yours. If something isn’t right, or you have some new ideas, then we can make your desired amendments. If you are not satisfied, then we are not satisfied and as a result, you won’t pay a penny until you are happy with the end product.
-Your Idea. Your Vision. Our Promise.</p> 
+Our detailed consultation process allows us to understand the requirements of our clients. We make sure we liaise with you regularly throughout the design process to make sure our visions match yours. If something isn’t right, or you have some new ideas, then we can make your desired amendments. You are our number one priority.<br></p>
 
-
-</p>
-  
+<br>
+<p id="large_about"><b>Your Idea. Your Vision. Our Promise.</b></p><br>
+<hr>
 </div>
-
 <div class="contact_info">
     <form class="contact_form" method="post" action="">
-        <h2>Write us a letter</h2>
-        <input type="text" class="autoclear" name="name" value="Enter your name"/> <br />
-        <input type="text" class="autoclear" name="mail" value="Enter your E-mail"/> <br />
-        <textarea cols="30" rows="15" name="message"></textarea>
-        <div class="button_cont">
-        <input type="submit" value="Send" />
-        </div>
+<g:img alt="" class="transition" dir="images/img/about-us/" file="officeclose.png" /><br>
     </form>
     
     <div class="other_contacts">
-        <h2>Get in touch...</h2>
-        <p>Need any more information? Get in touch and we will be happy to assist you...</p>
+        <h2>Our Mission...</h2>
+        <p><i>“We offer professional and affordable design solutions, customised around you. Your idea, your vision, our promise. Welcome to a new way of thinking. RAMM - design solutions with clarity.”
+</i></p>
         <div class="contact_item phone">0114 2675339</div>
         <div class="contact_item mail">ramm.designs@gmail.com</div>
         <div class="contact_item twitter"><a href="${createLink(action:'twitter', controller:'home')}" target="_blank">RAMM_Designs</a></div>
@@ -89,9 +82,9 @@ Your Idea. Your Vision. Our Promise.</p>
     <ul class="footer_navi">
         <li><g:link controller="home" action="index" class="transition">Home</g:link></li>
         <li><g:link controller="home" action="products" class="transition">Products</g:link></li>
-	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
+	<li class="current"><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
-        <li class="current"><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+        <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
     </ul>
 </div>
 
