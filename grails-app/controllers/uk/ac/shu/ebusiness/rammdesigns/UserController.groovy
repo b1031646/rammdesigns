@@ -8,7 +8,7 @@ class UserController {
 	// Before Interceptor that restricts access to Admin users only //
 
 def beforeInterceptor = [action:this.&auth, 
-                           except:["login", "signup", "logout", "my_account"]]
+                           except:["login", "signup", "logout", "my_account", "edit_details", "user_update"]]
 
   def auth() {
     if( !(session?.user?.role == "Admin") ){
@@ -198,8 +198,47 @@ def beforeInterceptor = [action:this.&auth,
 	redirect(controller:'home')
 	}
 
+	// USER EDIT PERSONAL DETAILS
 
+	def edit_details(Long id) {
+        def userInstance = User.get(id)
+        if (!userInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
+            redirect(action: "edit_details")
+            return
+        }
 
+        [userInstance: userInstance]
+    }
+
+    def user_update(Long id, Long version) {
+        def userInstance = User.get(id)
+        if (!userInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
+            redirect(action: "edit_details")
+            return
+        }
+
+        if (version != null) {
+            if (userInstance.version > version) {
+                userInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
+                          [message(code: 'user.label', default: 'User')] as Object[],
+                          "Another user has updated this User while you were editing")
+                render(view: "edit_details", model: [userInstance: userInstance])
+                return
+            }
+        }
+
+        userInstance.properties = params
+
+        if (!userInstance.save(flush: true)) {
+            render(view: "edit_details", model: [userInstance: userInstance])
+            return
+        }
+
+        flash.message = message(code: 'personal.details.updated', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        redirect(action: "my_account", id: userInstance.id)
+    }
 
 
 

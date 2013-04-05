@@ -120,6 +120,15 @@ p#large_about{
 	text-align: center; 
 }
 
+p#my_account {
+    font-size: 13px;
+    color: #7e7d7d;
+    line-height: 19px;
+text-align: justify; 
+display:inline;
+}
+
+
 /* Custom Product/Category Div */
 
 
@@ -178,39 +187,41 @@ p#large_about{
 
 /* Previous Client Rollovers */
 
-
-
 .wrapper {
-	height: 200px;
+	height: 120px;
 	width: 900px;
-	background-color:#CCC
+	background-color:#ebebeb
 	
 }
 .wrapper #imageone {
 	width: 180px;
 	float: right;
-	height: 150px;
-	margin-top: 25px;
+	height: 110px;
+	margin-top: 5px;
+	margin-bottom:5px;
 }
-.wrapper #imageone #Gameimage1 {
-	margin-top: 50px;
-	margin-left: 12px;
+.wrapper #imageone #Mastercardimage1 {
+	margin-top: 5px;
+	margin-left: 3px;
 }
-.wrapper #imageone #Essoimage {
-	margin-top: 40px;
-	margin-left: 50px;
+.wrapper #imageone #BMWimage {
+	margin-top: 6px;
+	margin-left: 45px;
 }
-.wrapper #imageone #Santanderimage {
-	margin-top: 45px;
+.wrapper #imageone #Asusimage {
 	width: 150;
+	margin-top: 40px;
+	margin-left: 15px;
 }
-.wrapper #imageone #BPimage {
-	margin-top: 20px;
-	margin-left: 50px;
+.wrapper #imageone #Shellimage {
+	margin-left: 33px;
+	margin-bottom: 8px;
+	margin-top: 9px;
 }
-.wrapper #imageone #VMimage {
-	margin-top: 25px;
+.wrapper #imageone #Dellimage {
+	margin-top: 5px;
 	margin-left: 35px;
+	
 }
 
 .wrapper #imagetwo {
@@ -235,10 +246,6 @@ p#large_about{
 	float: right;
 	
 }
-
-
-
-
 
 
 /* Category Navigation*/
@@ -392,6 +399,10 @@ div.main_img {
     height: 200px;
 }
 
+div.previous_clients {
+    width: 595px;
+    height: 100px;
+}
 
 /* About page social icons */
 

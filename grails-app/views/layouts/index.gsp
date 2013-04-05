@@ -159,36 +159,37 @@
     <div class="info_clients">
        <p> <h3>Previous Clients</h3></p>
 <br>
- <div class="main_img">
-
-
+ <div class="previous_clients">
 
 <div class="wrapper">
 
 <div id = "imageone">
-<div id="Gameimage1"><img src="http://www.hiddenagenda.dj/ramm/Game1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Game2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Game1.png'" 
-style="cursor:pointer;" /></div>
+<div onmousedown="return false"><div id="Mastercardimage1"><img src="http://www.hiddenagenda.dj/ramm/Mastercard1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Mastercard2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Mastercard1.png'" /></div>
+</div>
 </div>
 
 <div id = "imageone">
-<div id = "Essoimage"><img src="http://www.hiddenagenda.dj/ramm/Esso1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Esso2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Esso1.png'" 
-style="cursor:pointer;" /></div>
+<div onmousedown="return false">
+<div id = "BMWimage"><img src="http://www.hiddenagenda.dj/ramm/BMW1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/BMW2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/BMW1.png'" /></div>
+</div>
 </div>
 
 <div id = "imageone">
-<div id = "Santanderimage"><img src="http://www.hiddenagenda.dj/ramm/Santander1.png" alt width="178" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Santander 2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Santander1.png'" /></div>
+<div onmousedown="return false">
+<div id = "Asusimage"><img src="http://www.hiddenagenda.dj/ramm/Asus1.png" alt "" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Asus2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Asus1.png'" /></div>
+</div>
 </div>
 
 <div id = "imageone">
-<div id =  "BPimage"><img src="http://www.hiddenagenda.dj/ramm/BP1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/BP2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/BP1.png'" /></div>
+<div onmousedown="return false">
+<div id =  "Shellimage"><img src="http://www.hiddenagenda.dj/ramm/Shell1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Shell2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Shell1.png'" /></div></div>
 </div>
 
 <div id = "imageone">
-<div id = "VMimage"><img src="http://www.hiddenagenda.dj/ramm/VW1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/VW2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/VW1.png'" /></div>
+<div onmousedown="return false">
+<div id = "Dellimage"><img src="http://www.hiddenagenda.dj/ramm/Dell1.png" alt="" onmouseover=" this.src='http://www.hiddenagenda.dj/ramm/Dell2.png'" onmouseout=" this.src='http://www.hiddenagenda.dj/ramm/Dell1.png'" /></div></div>
 </div>
 </div>
-
-
 
 
 

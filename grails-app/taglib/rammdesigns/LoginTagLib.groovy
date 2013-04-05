@@ -11,7 +11,7 @@ class LoginTagLib {
 	out<< """   /  ${link(action:"admin_area", controller:"user"){"Admin Area"}}    """
 
     } else if (session?.user.role == "Member") { 
-      out << """   /  ${link(action:"my_account", controller:"user"){"My Account"}}"""      
+      out << """   /  ${link(action:"my_account", controller:"user") {"My Account"}}"""      
     }
 
 
