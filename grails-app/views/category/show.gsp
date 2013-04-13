@@ -25,7 +25,7 @@
 			
 				<g:if test="${categoryInstance?.categoryName}">
 				<li class="fieldcontain">
-					<span id="categoryName-label" class="property-label"><g:message code="category.categoryName.label" default="Category Name" /></span>
+					<span id="categoryName-label" class="property-label"><g:message code="category.categoryName.label" default="Category:" /></span>
 					
 						<span class="property-value" aria-labelledby="categoryName-label"><g:fieldValue bean="${categoryInstance}" field="categoryName"/></span>
 					
@@ -34,19 +34,19 @@
 			
 				<g:if test="${categoryInstance?.categoryDescription}">
 				<li class="fieldcontain">
-					<span id="categoryDescription-label" class="property-label"><g:message code="category.categoryDescription.label" default="Category Description" /></span>
+					<span id="categoryDescription-label" class="property-label"><g:message code="category.categoryDescription.label" default="Description:" /></span>
 					
 						<span class="property-value" aria-labelledby="categoryDescription-label"><g:fieldValue bean="${categoryInstance}" field="categoryDescription"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${categoryInstance?.products}">
+				<g:if test="${categoryInstance?.questions}">
 				<li class="fieldcontain">
-					<span id="products-label" class="property-label"><g:message code="category.products.label" default="Products" /></span>
+					<span id="questions-label" class="property-label"><g:message code="category.questions.label" default="FAQ's:" /></span>
 					
-						<g:each in="${categoryInstance.products}" var="p">
-						<span class="property-value" aria-labelledby="products-label"><g:link controller="product" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						<g:each in="${categoryInstance.questions}" var="q">
+						<span class="property-value" aria-labelledby="questions-label"><g:link controller="FAQ" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

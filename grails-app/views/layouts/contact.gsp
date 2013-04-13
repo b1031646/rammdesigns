@@ -33,7 +33,7 @@
         <li class="current"><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
 </ul>
 
-<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" />
+<div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
 
 </div>
 
@@ -101,7 +101,7 @@
 	<!-- Contact Form -->
 
     
-    <div class="contact_info">
+    <div class="contact_form_info">
 
     <g:form class ="contact_form" action="contact" name="contactForm">
 
@@ -134,13 +134,16 @@ ${flash.message}
         <g:submitButton class="contactButton" name="send" value="Send"></g:submitButton>
 
         </div>
-
+<br>
+<br>
     </g:form>
     
+
 	<!-- Other Contacts -->
 
-    <div class="other_contacts">
+    <div class="contact_page_other_contacts">
         <h2>Get in touch...</h2>
+<br>
         <p>Need any more information? Get in touch and we will be happy to assist you...</p>
         <div class="contact_item phone">0114 2675339</div>
         <div class="contact_item mail">ramm.designs@gmail.com</div>

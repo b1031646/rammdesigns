@@ -66,6 +66,8 @@ class HomeController {
 	def team() {}
 
 	def view_work() {}
+
+	def something_else() {}
 	
 
 

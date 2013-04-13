@@ -1169,6 +1169,11 @@ div.other_contacts {
     margin-top: 25px;
 }
 
+div.contact_page_other_contacts {
+    margin-left: 550px;
+    margin-top: 30px;
+}
+
 div.other_contacts p {
     margin-top: 5px;
     padding-bottom: 15px;
@@ -1185,6 +1190,11 @@ div.contact_item {
 div.contact_info {
     border-top: 1px solid #fff;
 	margin-top:-20px;
+}
+
+div.contact_form_info {
+    border-top: 1px solid #fff;
+	margin-top:0px;
 }
 
 div.phone {

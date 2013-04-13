@@ -33,7 +33,7 @@
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
 </ul>
 
-<g:img alt="SimpleTape" class="logo" dir="images" file="img/logo.png" />
+<div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
 
 </div>
 
@@ -51,7 +51,7 @@
 <g:link controller="product" action="category"  params="[category: 'Poster Design']" class="transition" >Poster/Leaflet Design</g:link> //
 <g:link controller="product" action="category"  params="[category: 'Business Card Design']" class="transition" >Business Card Design</g:link> //
 <g:link controller="product" action="category"  params="[category: 'Social Media Design']" class="transition" >Social Media Design</g:link> //
-<g:link controller="product" action="category"  params="[category: 'Logo Design']" class="transition" >Need Something Else</g:link>  /<br>
+<g:link controller="home" action="something_else"  params="[category: 'Logo Design']" class="transition" >Need Something Else</g:link>  /<br>
 </font>
 </p>
 </div>

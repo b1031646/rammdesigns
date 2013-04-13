@@ -33,7 +33,7 @@
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
 </ul>
 
-<g:img alt="SimpleTape" class="logo" dir="images" file="img/logo.png" />
+<div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
 
 </div>
 

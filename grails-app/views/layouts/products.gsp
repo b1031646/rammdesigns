@@ -33,8 +33,7 @@
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
 </ul>
 
-<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" />
-
+<div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
 </div>
 
 
@@ -137,7 +136,7 @@
           
         <div class="work_info">
         
-        <div class="work_preview"><g:link controller="home" action="index" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/large/needsomethingelse.png" /></g:link>
+        <div class="work_preview"><g:link controller="home" action="something_else" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/large/needsomethingelse.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
            
         </div>

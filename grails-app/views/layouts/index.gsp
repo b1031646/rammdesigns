@@ -64,7 +64,7 @@
 	
 </ul>
 
-<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" />
+<div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
 
 </div>
 
@@ -142,7 +142,7 @@
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
-    <div class="last_img"><g:link controller="home" action="index" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/needsomethingelse.png" /></g:link>
+    <div class="last_img"><g:link controller="home" action="something_else" id="${params.category}" params="[category: 'Need Something Else']" class="transition" ><g:img alt="Best work" class="transition" dir="images" file="img/product-tiles/needsomethingelse.png" /></g:link>
         <g:link controller="home" action="products" class="transition" ><g:img alt="" class="view" dir="images"  file="img/linz.png" /></g:link>
     </div>
     
@@ -295,7 +295,7 @@ ${flash.message}
 <br>
 ${flash.message}
      <g:hasErrors bean="${subscription}">
-       <div class="errors">
+       <div id ="errors"> 
          <g:renderErrors bean="${subscription}"></g:renderErrors>
        </div>
      </g:hasErrors>

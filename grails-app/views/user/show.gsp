@@ -16,7 +16,7 @@
 
 <!-- Custom links for admin area -->
 
-<li><g:link controller="user" action="list" class="transition"><g:img dir="images"  file="skin/faq.png"/> FAQ</g:link></li>
+<li><g:link controller="FAQ" action="list" class="transition"><g:img dir="images"  file="skin/faq.png"/> FAQ</g:link></li>
 <li><g:link controller="subscription" action="list" class="transition"><g:img dir="images"  file="skin/subscription.png"/> Subscription</g:link></li>
 <li><g:link controller="contact" action="list" class="transition"><g:img dir="images"  file="skin/contact.png"/> Contact</g:link></li>
 <li><g:link controller="product" action="list" class="transition"><g:img dir="images"  file="skin/product.png"/> Product</g:link></li>
@@ -59,7 +59,7 @@
 			
 				<g:if test="${userInstance?.firstName}">
 				<li class="fieldcontain">
-					<span id="firstName-label" class="property-label"><g:message code="user.firstName.label" default="First Name" /></span>
+					<span id="firstName-label" class="property-label"><g:message code="user.firstName.label" default="First Name:" /></span>
 					
 						<span class="property-value" aria-labelledby="firstName-label"><g:fieldValue bean="${userInstance}" field="firstName"/></span>
 					
@@ -68,7 +68,7 @@
 			
 				<g:if test="${userInstance?.lastName}">
 				<li class="fieldcontain">
-					<span id="lastName-label" class="property-label"><g:message code="user.lastName.label" default="Last Name" /></span>
+					<span id="lastName-label" class="property-label"><g:message code="user.lastName.label" default="Last Name:" /></span>
 					
 						<span class="property-value" aria-labelledby="lastName-label"><g:fieldValue bean="${userInstance}" field="lastName"/></span>
 					
@@ -77,7 +77,7 @@
 			
 				<g:if test="${userInstance?.username}">
 				<li class="fieldcontain">
-					<span id="username-label" class="property-label"><g:message code="user.username.label" default="Username" /></span>
+					<span id="username-label" class="property-label"><g:message code="user.username.label" default="Username:" /></span>
 					
 						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${userInstance}" field="username"/></span>
 					
@@ -86,7 +86,7 @@
 			
 				<g:if test="${userInstance?.password}">
 				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="user.password.label" default="Password" /></span>
+					<span id="password-label" class="property-label"><g:message code="user.password.label" default="Password:" /></span>
 					
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${userInstance}" field="password"/></span>
 					
@@ -95,7 +95,7 @@
 			
 				<g:if test="${userInstance?.role}">
 				<li class="fieldcontain">
-					<span id="role-label" class="property-label"><g:message code="user.role.label" default="Role" /></span>
+					<span id="role-label" class="property-label"><g:message code="user.role.label" default="Role:" /></span>
 					
 						<span class="property-value" aria-labelledby="role-label"><g:fieldValue bean="${userInstance}" field="role"/></span>
 					
@@ -104,18 +104,18 @@
 			
 				<g:if test="${userInstance?.dateCreated}">
 				<li class="fieldcontain">
-					<span id="dateCreated-label" class="property-label"><g:message code="user.dateCreated.label" default="Date Created" /></span>
+					<span id="dateCreated-label" class="property-label"><g:message code="user.dateCreated.label" default="Date Joined:" /></span>
 					
-						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${userInstance?.dateCreated}" /></span>
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${userInstance?.dateCreated}" type="date" style="LONG" /></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${userInstance?.lastUpdated}">
 				<li class="fieldcontain">
-					<span id="lastUpdated-label" class="property-label"><g:message code="user.lastUpdated.label" default="Last Updated" /></span>
+					<span id="lastUpdated-label" class="property-label"><g:message code="user.lastUpdated.label" default="Last Updated:" /></span>
 					
-						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${userInstance?.lastUpdated}" /></span>
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${userInstance?.lastUpdated}" type="date" style="LONG"  /></span>
 					
 				</li>
 				</g:if>

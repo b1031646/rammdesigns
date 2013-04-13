@@ -24,6 +24,15 @@ class Category {
 	String toString() {
         return categoryName
    	 }
+	
+
+	// Joins the FAQ table. A category can have many associated FAQ's //
+
+	Set questions
+
+	static hasMany = [questions: FAQ]
+
+	static mappedBy = [questions: "category"]	
 
 
 	// Constraints //

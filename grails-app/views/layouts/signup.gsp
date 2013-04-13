@@ -39,7 +39,7 @@
 
 <!-- Ramm Designs Logo -->
 
-<g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" />
+<div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
 
 </div>
 

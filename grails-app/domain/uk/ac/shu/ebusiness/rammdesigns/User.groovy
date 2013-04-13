@@ -36,6 +36,16 @@ class User {
         return username
    	 }
 
+
+	// Joins the FAQ table. A user can create many FAQ's //
+
+	Set questions
+
+	static hasMany = [questions: FAQ]
+
+	static mappedBy = [questions: "user"]
+
+
  
 	// Constraints //
 

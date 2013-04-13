@@ -18,18 +18,18 @@
 	<g:textField name="categoryDescription" required="" value="${categoryInstance?.categoryDescription}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'products', 'error')} ">
-	<label for="products">
-		<g:message code="category.products.label" default="Products" />
+<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'questions', 'error')} ">
+	<label for="questions">
+		<g:message code="category.questions.label" default="Questions" />
 		
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${categoryInstance?.products?}" var="p">
-    <li><g:link controller="product" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
+<g:each in="${categoryInstance?.questions?}" var="q">
+    <li><g:link controller="FAQ" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="product" action="create" params="['category.id': categoryInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'product.label', default: 'Product')])}</g:link>
+<g:link controller="FAQ" action="create" params="['category.id': categoryInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'FAQ.label', default: 'FAQ')])}</g:link>
 </li>
 </ul>
 
