@@ -8,7 +8,7 @@ class UserController {
 	// Before Interceptor that restricts access to Admin users only //
 
 def beforeInterceptor = [action:this.&auth, 
-                           except:["login", "signup", "logout", "my_account", "edit_details", "user_update"]]
+                           except:["login", "login_product", "signup", "logout", "my_account", "edit_details", "user_update"]]
 
   def auth() {
     if( !(session?.user?.role == "Admin") ){
@@ -149,6 +149,32 @@ def beforeInterceptor = [action:this.&auth,
 
 	// Login //
 
+
+
+	// Code to login from product page and get redirected to the product instead of the home screen //
+
+	def login_product(LoginCommand cmd) {
+
+	def returnpage = (params.product.id)
+
+	if(request.method == 'POST') {
+	if(!cmd.hasErrors()) {
+	session.user = cmd.getUser()
+	redirect(controller:"product", action: "detail", id: returnpage)
+	} else {
+	  render(view:"/product/detail", model:[login_productCmd:cmd, productInstance: Product.get(returnpage as Long)])
+	}
+	} else {
+	redirect(controller:"product", action: "detail", id: returnpage)
+	}
+	}
+
+
+
+
+
+ 	// Main login code that redirects to home page //
+
 	def login(LoginCommand cmd) {
 	if(request.method == 'POST') {
 	if(!cmd.hasErrors()) {
@@ -198,7 +224,9 @@ def beforeInterceptor = [action:this.&auth,
 	redirect(controller:'home')
 	}
 
-	// USER EDIT PERSONAL DETAILS
+
+
+	// USER EDIT PERSONAL DETAILS //
 
 	def edit_details(Long id) {
         def userInstance = User.get(id)

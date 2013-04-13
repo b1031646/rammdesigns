@@ -79,7 +79,24 @@
 <g:if test="${flash.message}">
 <div class="message_addcart" role="status">${flash.message}</div>
 </g:if>
-
+<g:if test="${session.user == null}">
+   <g:form controller="user" action="login_product" name="loginForm">
+   <p class="info">
+        Please login with your username and password. <br />
+        Don't have an account?
+        <g:link controller="user" action="signup">Sign up now!</g:link>
+      </p>
+<br>
+       <div><p class="info">Username *</p></div>
+       <div id ="errors"><g:textField name="username"
+                    value="${fieldValue(bean:login_productCmd, field:'username')}"> </g:textField><g:renderErrors bean="${login_productCmd}" as="list" field="username"/> </div>
+       <div><p class="info">Password *</p></div>
+       <div id ="errors"><g:passwordField name="password"></g:passwordField> <g:renderErrors bean="${login_productCmd}" as="list" field="password"/></div>
+       <br/>
+	<g:hiddenField  name="product.id" from="${productInstance.id}" optionKey="id" required="" value="${productInstance.id}" class="many-to-one"/>
+       <g:submitButton class="loginButton" name="Login" value="Login"></g:submitButton>
+    </g:form>
+</g:if>
 
         <div class="description">
         <h4 class="description">DESCRIPTION:</h4>
