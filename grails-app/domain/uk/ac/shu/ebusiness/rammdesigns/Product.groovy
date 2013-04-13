@@ -31,6 +31,12 @@ class Product {
         return productName
    	 }
 
+	Set cart_entries
+
+	static hasMany = [cart_entries: Cart]
+
+	static mappedBy = [cart_entries: "product"]	
+
 
 	// Constraints //
 	

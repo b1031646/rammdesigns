@@ -40,10 +40,11 @@ class User {
 	// Joins the FAQ table. A user can create many FAQ's //
 
 	Set questions
+	Set cart_entries
 
-	static hasMany = [questions: FAQ]
+	static hasMany = [questions: FAQ, cart_entries: Cart]
 
-	static mappedBy = [questions: "user"]
+	static mappedBy = [questions: "user", cart_entries: "user"]
 
 
  

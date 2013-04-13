@@ -8,7 +8,7 @@ class ProductController {
 	// Before Interceptor that restricts access to Admin users only //
 
 def beforeInterceptor = [action:this.&auth, 
-                           except:["category", "detail"]]
+                           except:["category", "detail","cart"]]
 
   def auth() {
     if( !(session?.user?.role == "Admin") ){
@@ -143,6 +143,9 @@ def category() {
 	// Show details of a selected product on the product_detail page //
 
     def detail(Long id) {
+	
+	
+
         def productInstance = Product.get(id)
         if (!productInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'product.label', default: 'Product'), id])
@@ -154,6 +157,33 @@ def category() {
     }
 	
 
+
+	def cart(){
+
+
+
+	if(request.method == 'POST') {
+
+	def ca = new Cart()
+
+	ca.properties['user', 'product'] = params
+
+	if(ca.save()) {
+
+	
+
+	redirect(controller:"product", action:"detail")
+
+	} else {
+
+	return [cart:ca]
+
+	}
+	}
+	
+
+
+}
 
 
 

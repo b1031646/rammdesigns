@@ -61,9 +61,26 @@
         
         <div class="work_info_text">
         <h4>Category: <g:link controller="product" action="category" id="${params.category}" params="[category: "${productInstance.category}"]" ><g:fieldValue bean="${productInstance}" field="category"/></g:link></h4>
+
+<br>
+<g:if test="${session.user}">
+     <body onLoad="document.subscriptionForm.subscribe.focus()">
+ <g:form controller="cart" action="cart" name="addtocart">
+
+
+<g:hiddenField  name="product.id" from="${productInstance.id}" optionKey="id" required="" value="${productInstance.id}" class="many-to-one"/>
+<g:hiddenField  name="user.id" from="${session.user.id}" optionKey="id" required="" value="${session.user.id}" class="many-to-one"/>
+
+<g:submitButton class="cartButton" name="addtocart" value="Add to Cart"></g:submitButton>
         
-        
-        
+ </g:form>
+</g:if>
+
+<g:if test="${flash.message}">
+<div class="message_addcart" role="status">${flash.message}</div>
+</g:if>
+
+
         <div class="description">
         <h4 class="description">DESCRIPTION:</h4>
         
