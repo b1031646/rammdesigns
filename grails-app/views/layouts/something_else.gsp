@@ -46,6 +46,15 @@
 <hr>
 <g:img alt="" class="transition" dir="images/img/page_headers/" file="needsomethingelse.png" />
 <hr>
+<p id="category_nav">
+<FONT COLOR="#1a3b42">Categories: <g:link controller="product" action="category"  params="[category: 'Logo Design']" class="transition" >Logo Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Banner Design']" class="transition" >Banner Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Poster Design']" class="transition" >Poster/Leaflet Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Business Card Design']" class="transition" >Business Card Design</g:link> //
+<g:link controller="product" action="category"  params="[category: 'Social Media Design']" class="transition" >Social Media Design</g:link> //
+<g:link controller="home" action="something_else"  class="transition" >Need Something Else</g:link>  /<br>
+</font>
+</p>
 <br>
 <p>At RAMM, we pride ourselves on offering an off the shelf pricing service whereby the customer can select the services they want and simply check out. Our off the shelf services cover the majority of needs, but you may find that you need something we don’t offer on the site.  If you think we can do it, we probably can. Send us a message with your requirements and we will tell you what we can do and give you a no-obligation quote. The following are examples of previous work that we have completed that was not advertised on the site:</p>
 

@@ -51,7 +51,7 @@
 <g:link controller="product" action="category"  params="[category: 'Poster Design']" class="transition" >Poster/Leaflet Design</g:link> //
 <g:link controller="product" action="category"  params="[category: 'Business Card Design']" class="transition" >Business Card Design</g:link> //
 <g:link controller="product" action="category"  params="[category: 'Social Media Design']" class="transition" >Social Media Design</g:link> //
-<g:link controller="home" action="something_else"  class="transition" >Need Something Else</g:link>  /<br>
+<g:link controller="home" action="something_else"  params="[category: 'Logo Design']" class="transition" >Need Something Else</g:link>  /<br>
 </font>
 </p>
 </div>
@@ -61,7 +61,7 @@
 
 
 
-				<g:each in="${testInstanceList}" status="i" var="testInstance">
+				<g:each in="${b}" status="i" var="b">
 
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
@@ -70,52 +70,17 @@
 <table style="width:100%">
 
   <tr>
-<div class="product_category_wrapper" id="product_category_wrapper">
-  <div id="image"><g:img alt="" class="transition" dir="images/img/product-images/small/" file="${fieldValue(bean: testInstance, field: "filePath")}" /></div>
-  <div id="imageTitle"><b><g:link action="detail" id="${testInstance.id}">${fieldValue(bean: testInstance, field: "productName")}</g:link></b></div>
-  <div id="description"><p>${fieldValue(bean: testInstance, field: "productDescription")}</p>
-</div>
-  <div id="moreInfo">£${fieldValue(bean: testInstance, field: "price")}<br>
-
-<g:link action="detail" id="${testInstance.id}"><g:img alt="" class="transition" dir="images/img/more_info/" file="more_info.png" /></g:link></div>
-  <div id="price">
-
-<!-- Add to cart button -->
-
-<g:if test="${session.user}">
-     
- <g:form controller="cart" action="cart" name="addtocart">
 
 
-<g:hiddenField  name="product.id" from="${testInstance.id}" optionKey="id" required="" value="${testInstance.id}" class="many-to-one"/>
-<g:hiddenField  name="user.id" from="${session.user.id}" optionKey="id" required="" value="${session.user.id}" class="many-to-one"/>
+${fieldValue(bean: b, field: "product")}
 
-<g:submitButton class="cartButton" name="addtocart" value="Add to Cart"></g:submitButton>
-        
- </g:form>
-</g:if>
-
-<g:if test="${flash.message}">
-<div class="message_addcart" role="status">${flash.message}</div>
-</g:if>
-<g:if test="${session.user == null}">
-   
-</g:if>
-
-<!-- End of add to cart button -->
-
-
-
-</div>
-
-</div>
 
 
 
   </tr>
-
+<br>
 <g:img alt="" class="transition" dir="images/img/product-images/" file="divider.png" /><br>
-
+<br>
 </table>
 
 

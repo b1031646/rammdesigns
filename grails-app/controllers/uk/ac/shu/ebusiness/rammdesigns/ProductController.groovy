@@ -157,10 +157,9 @@ def category() {
     }
 	
 
+	// Functionality to add products into a users shopping cart //
 
 	def cart(){
-
-
 
 	if(request.method == 'POST') {
 
@@ -181,9 +180,11 @@ def category() {
 	}
 	}
 	
-
-
 }
+
+// Functionality to display the contents of a users basket //
+
+
 
 
 

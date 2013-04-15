@@ -64,7 +64,7 @@
 
 <br>
 <g:if test="${session.user}">
-     <body onLoad="document.subscriptionForm.subscribe.focus()">
+     
  <g:form controller="cart" action="cart" name="addtocart">
 
 

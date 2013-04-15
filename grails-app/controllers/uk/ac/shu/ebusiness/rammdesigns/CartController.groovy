@@ -130,6 +130,13 @@ def returnpage = (params.product.id)
 
 
 
+	// Functionality to display the contents of a users basket //
+
+
+
+
+
+
 
 
 
