@@ -34,8 +34,8 @@ def init = {servletContext ->
 
 	
 	// In Logo Category //
-	def Product_Logo1 = lookupOrCreateProduct('Logo - Single Design', 'This option will give you one logo designed to your specifications. If you would like more prototypes designing, then choose one of our multiple-prototype packages.', '1design.png','Logo Design',00.00 )
-	def Product_Logo2 = lookupOrCreateProduct('Logo - Five Designs', 'This option will give you five different logos designed to your specifications. If you would like more prototypes designing, then choose a package offering more prototypes.', '5designs.png','Logo Design',00.00 )
+	def Product_Logo1 = lookupOrCreateProduct('Logo - Single Design', 'This option will give you one logo designed to your specifications. If you would like more prototypes designing, then choose one of our multiple-prototype packages.', '1design.png','Logo Design',20.00 )
+	def Product_Logo2 = lookupOrCreateProduct('Logo - Five Designs', 'This option will give you five different logos designed to your specifications. If you would like more prototypes designing, then choose a package offering more prototypes.', '5designs.png','Logo Design',11.00 )
 	def Product_Logo3 = lookupOrCreateProduct('Logo - Ten Designs', 'This option will give you ten different logos designed to your specifications. If you would like more prototypes designing, then choose a package offering more prototypes.', '10designs.png','Logo Design',00.00 )
 	def Product_Logo4 = lookupOrCreateProduct('Logo - Fifteen Designs', 'This option will give you fifteen different logos designed to your specifications. If you would like more prototypes designing, then choose a package offering more prototypes.', '15designs.png','Logo Design',00.00 )
 	def Product_Logo5 = lookupOrCreateProduct('Logo - Twenty Designs', 'This option will give you twenty different logos designed to your specifications. If you would like more prototypes designing, then choose a package offering more prototypes.', '20designs.png','Logo Design',00.00 )

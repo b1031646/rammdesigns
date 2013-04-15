@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class CartController {
 
+  def springSecurityService
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -133,9 +135,58 @@ def returnpage = (params.product.id)
 	// Functionality to display the contents of a users basket //
 
 
+def showcart() {
+
+//println(springSecurityService.principal)
+// def user = User.get(springSecurityService.principal.id)
+
+def result = [cart:Cart.findAllByUser(session.user)]
+result.total = 0
+result.cart.each { cartentry ->
+result.total+=cartentry.product.price
+}
+  result
+
+}
 
 
 
+
+
+def showcart2() {
+  def crit = Product.createCriteria()
+  def products_in_cart = crit.list {
+    cart_entries {
+      user {
+        eq('username',session.user.username)
+      }
+    }
+  }
+  def result=[cart:products_in_cart]
+  return result;
+}
+
+	// Delete from cart //
+
+    def cartdelete(Long id) {
+        def cartInstance = Cart.get(id)
+println(cartInstance)
+        if (!cartInstance) {
+            flash.message = (" ${params.id} Item removed from cart")
+            redirect(action: "showcart")
+            return
+        }
+
+        try {
+            cartInstance.delete(flush: true)
+          flash.message = ("Item removed from cart")
+            redirect(action: "showcart")
+        }
+        catch (DataIntegrityViolationException e) {
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'cart.label', default: 'Cart'), id])
+            redirect(action: "show", id: id)
+        }
+    }
 
 
 
