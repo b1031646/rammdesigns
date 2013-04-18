@@ -9,6 +9,7 @@ body {
     font-family: Arial, Arial, Helvetica, sans-serif;
     background: url(../img/bg_pat.png) #fff;
     background-attachment: fixed;
+
 }
 
 ul li.current a {
@@ -191,6 +192,7 @@ display:inline;
 	height: 20px;
 	padding-right: 5px;
 	padding-left: 5px;
+
 	
 }
 #product_category_wrapper #description {
@@ -350,6 +352,56 @@ font-family: Arial, Arial, Helvetica, sans-serif;
 }
 
 /* Container, content */
+
+
+/* Add to cart styling */
+.errors,
+.message_addcart {
+	font-size: 0.8em;
+	line-height: 2;
+	margin: 1em 0em;
+	padding: 0.25em;
+}
+
+
+
+.message_addcart {
+	background: #f3f3ff;
+	border: 0.5px solid #4A96A6;
+	color: #006dba;
+	   -moz-box-shadow: 0 0 0.25em #b2d1ff;
+	-webkit-box-shadow: 0 0 0.25em #b2d1ff;
+	        box-shadow: 0 0 0.25em #b2d1ff;
+}
+
+.errors {
+	background: #fff3f3;
+	border: 1px solid #ffaaaa;
+	color: #cc0000;
+	   -moz-box-shadow: 0 0 0.25em #ff8888;
+	-webkit-box-shadow: 0 0 0.25em #ff8888;
+	        box-shadow: 0 0 0.25em #ff8888;
+}
+
+.errors ul,
+.message_addcart {
+	padding: 0;
+}
+
+.errors li {
+	list-style: none;
+	background: transparent url(../img/exclamation.png) 0.5em 50% no-repeat;
+	text-indent: 2.2em;
+}
+
+.message_addcart {
+	background: transparent url(../img/information.png) 0.5em 50% no-repeat;
+	text-indent: 2.2em;
+}
+
+
+
+
 div#flash_message {
 
 color: #ff0000;
@@ -674,6 +726,20 @@ div.subscription form input[name="mail"] {
 }
 
 div.subscription form input[type="submit"] {
+    font-size: 14px;
+    color: #fff;
+    float: right;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    background-color: #404852;
+    margin-top: 10px!important;
+    padding: 0;
+    border: none;
+}
+
+div.price form input[name="addtocart"] {
     font-size: 14px;
     color: #fff;
     float: right;

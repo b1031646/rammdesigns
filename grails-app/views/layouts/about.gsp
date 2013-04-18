@@ -76,7 +76,7 @@ Our detailed consultation process allows us to understand the requirements of ou
         
         <div class="latest_img"><a href="${createLink(action:'youtube', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Youtube.png"/></a></div>
         <div class="latest_img"><a href="${createLink(action:'pinterest', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/Pinterest.png"/></a></div>
-        <div class="latest_img last_img"><a href="${createLink(action:'rss', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/small/RSS.png"/></a></div>
+        <div class="latest_img last_img"><a href="${createLink(action:'about', controller:'home')}"><g:img dir="images"  file="img/social-media/small/RSS.png"/></a></div>
     </div> 
     
     </div>

@@ -4,7 +4,7 @@
 
     <% /*  Resources Links for CSS/JS Files */ %>
     
-    <r:require module="application"/>
+    <r:require module="noborder"/>
     <r:layoutResources/>
 
 
@@ -90,7 +90,8 @@
 <g:hiddenField  name="product.id" from="${testInstance.id}" optionKey="id" required="" value="${testInstance.id}" class="many-to-one"/>
 <g:hiddenField  name="user.id" from="${session.user.id}" optionKey="id" required="" value="${session.user.id}" class="many-to-one"/>
 
-<g:submitButton class="cartButton" name="addtocart" value="Add to Cart"></g:submitButton>
+<g:actionSubmitImage value="submit" type="submit" name="addtocart" controller="cart" action="cart" border="0" src="${resource(dir:'images',file:'img/buttons/addtocart.png')}" border="0" />
+
         
  </g:form>
 </g:if>

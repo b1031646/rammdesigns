@@ -88,7 +88,7 @@
         
         <div class="latest_img"><a href="${createLink(action:'youtube', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/Youtube.png"/></a></div>
         <div class="latest_img"><a href="${createLink(action:'pinterest', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/Pinterest.png"/></a></div>
-        <div class="latest_img last_img"><a href="${createLink(action:'rss', controller:'home')}" target="_blank"><g:img dir="images"  file="img/social-media/RSS.png"/></a></div>
+        <div class="latest_img last_img"><a href="${createLink(action:'index', controller:'home')}"><g:img dir="images"  file="img/social-media/RSS.png"/></a></div>
     </div> 
 
 
@@ -207,13 +207,13 @@
     <div class="post">
         
     <div class="info_item float">
-        <h3><g:link controller="view_Post" class="transition">MovieMail</g:link></h3>
+        <h3>MovieMail</h3>
         <p>We worked with one of the leading movies-by-post companies in order to freshen up the brand image for a successful marketing campaign.<br>
 <br>
 <b><i>"RAMM Designs worked very closely with our marketing team to turn our visions into reality and put MovieMail back in the spotlight."</i></b></p>
     </div>
     
-        <g:link controller="view_work" action="contacts" class="transition"><g:img dir="images" file="img/latest_news/moviemail.png" title="View post" alt="Movie Mail Ltd"/></g:link>
+      <g:img dir="images" file="img/latest_news/moviemail.png" title="View post" alt="Movie Mail Ltd"/>
         
 
 
@@ -222,13 +222,13 @@
     <div class="post">
         
     <div class="info_item float">
-         <h3><g:link controller="view_Post" class="transition">Freht</g:link></h3>
+         <h3>Freht</h3>
         <p>Freht are an industrial haulage company operating in Germany. They wanted to stand out from the crowd and our talented team of designers helped made this happen.<br>
 <br>
 <b><i>"After operating in the haulage industry for thirty years we decided to overhaul the company's image. RAMM delivered the goods."</i></b></p>
     </div>
     
-    <a class="transition"<g:link controller="home" action="contacts" class="transition"><g:img dir="images" file="img/latest_news/freht.png" title="View post" alt="Freht Ltd"/></g:link>
+   <g:img dir="images" file="img/latest_news/freht.png" title="View post" alt="Freht Ltd"/>
 
     </div>
 

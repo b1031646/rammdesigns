@@ -4,7 +4,7 @@
 
     <% /*  Resources Links for CSS/JS Files */ %>
     
-    <r:require module="application"/>
+    <r:require module="noborder"/>
     <r:layoutResources/>
 <g:set var="entityName" value="${message(code: 'product.label', default: 'Product')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
@@ -60,7 +60,9 @@
         <div class="title_img"><g:img alt="" class="transition" dir="images/img/product-images/large/" file="${fieldValue(bean: productInstance, field: "filePath")}" /></div>
         
         <div class="work_info_text">
-        <h4>Category: <g:link controller="product" action="category" id="${params.category}" params="[category: "${productInstance.category}"]" ><g:fieldValue bean="${productInstance}" field="category"/></g:link></h4>
+
+<h4>Price: <g:formatNumber number="${productInstance.price}" type="currency" currencyCode="GBP"/></h4>
+
 
 <br>
 <g:if test="${session.user}">
@@ -71,11 +73,11 @@
 <g:hiddenField  name="product.id" from="${productInstance.id}" optionKey="id" required="" value="${productInstance.id}" class="many-to-one"/>
 <g:hiddenField  name="user.id" from="${session.user.id}" optionKey="id" required="" value="${session.user.id}" class="many-to-one"/>
 
-<g:submitButton class="cartButton" name="addtocart" value="Add to Cart"></g:submitButton>
+<g:actionSubmitImage value="submit" type="submit" name="addtocart" controller="cart" action="cart" border="0" src="${resource(dir:'images',file:'img/buttons/addtocart.png')}" border="0" />
         
  </g:form>
 </g:if>
-
+        <h4>Category: <g:link controller="product" action="category" id="${params.category}" params="[category: "${productInstance.category}"]" ><g:fieldValue bean="${productInstance}" field="category"/></g:link></h4>
 <g:if test="${flash.message}">
 <div class="message_addcart" role="status">${flash.message}</div>
 </g:if>
