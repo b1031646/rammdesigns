@@ -10,7 +10,7 @@ Outcomes
 ===========
 <hr>
 *A business plan report<br>
-*An web-based, interactive prototype<br>
+*A web-based, interactive prototype<br>
 <br>
 Checking out and running the project
 ===========
