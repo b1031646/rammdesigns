@@ -106,6 +106,36 @@ p#category_nav{
 	
 }
 
+p#ind_price{
+    font-size:15px;
+    color: #D76F11;
+    line-height: 10px;
+	float:center;
+text-align:center;
+padding-left:18px;
+display:inline;
+}
+
+p#cart_details{
+    font-size: 14px;
+    color: #000000;
+    line-height: 20px;
+	float:right;
+text-align:right;
+padding-right:9px;
+display:inline;
+}
+
+p#cart_details_insert{
+    font-size: 14px;
+    color: #D76F11;
+    line-height: 20px;
+	float:right;
+
+padding-right:30px;
+display:inline;
+}
+
 p#logintaglib{
     font-size: 14px;
     color: #4A96A6;
@@ -332,6 +362,12 @@ div#login {
 	width: auto;
     height: 25px;
 	padding-top:5px;
+}
+
+div#cart_wrapper {
+
+	background: url(../img/shoppingcartbreak.png) #fff;
+	background-repeat:no-repeat;
 }
 
 div#content {

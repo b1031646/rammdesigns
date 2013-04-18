@@ -42,7 +42,7 @@
 <!-- Top Content -->
 
 <hr>
-SHOPPING CART
+<g:img alt="" class="transition" dir="images/img/page_headers/" file="shoppingcart.png" />
 <hr>
 <p id="category_nav">
 <FONT COLOR="#1a3b42">Categories: <g:link controller="product" action="category"  params="[category: 'Logo Design']" class="transition" >Logo Design</g:link> //
@@ -53,6 +53,7 @@ SHOPPING CART
 <g:link controller="home" action="something_else"  class="transition" >Need Something Else</g:link>  /<br>
 </font>
 </p>
+<br>
 <br>
 <br>
 				<g:each in="${cart}" status="i" var="cartentry">
@@ -71,11 +72,11 @@ SHOPPING CART
 <br>
 
 </div>
-  <div id="moreInfo">£${cartentry.product.price}<br>
+  <div id="moreInfo"><p id="ind_price"><b><g:formatNumber number="${cartentry.product.price}" type="currency" currencyCode="GBP" /></b></p><br>
 
-<g:link controller="product" action="detail" id="${cartentry.product.id}"><g:img alt="" class="transition" dir="images/img/more_info/" file="more_info.png" /></g:link></div>
+<g:link controller="product" action="detail" id="${cartentry.product.id}"><g:img alt="" class="transition" dir="images/img/buttons/" file="moreinfo.png" /></g:link></div>
   <div id="price">
-<b><g:link controller="cart" action="cartdelete" id="${cartentry.id}" class="transition">Delete</g:link></b>
+<b><g:link controller="cart" action="cartdelete" id="${cartentry.id}" class="transition"><g:img alt="" class="transition" dir="images/img/buttons/" file="delete.png" /></g:link></b>
 <!-- Add to cart button -->
 
 
@@ -97,14 +98,28 @@ SHOPPING CART
 </table>
 
 
-<br>
+
 			</g:each>
 
 
-<b>Total Price:<g:formatNumber number="${total}" type="currency" currencyCode="GBP" /></b>
+<div id="cart_wrapper">
+<b>
+<br>
+<br>
+<p id="cart_details_insert"><g:img alt="" class="transition" dir="images/img/buttons/" file="checkout.png" /></p>
+<p id="cart_details_insert"><g:formatNumber number="${total}" type="currency" currencyCode="GBP"/></p><p id="cart_details">Total:</p>
 
 
-
+</p>
+</b>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
 
 
 
