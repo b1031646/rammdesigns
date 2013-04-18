@@ -182,7 +182,6 @@ def category() {
 	
 }
 
-// Functionality to display the contents of a users basket //
 
 
 

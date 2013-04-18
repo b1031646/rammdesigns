@@ -1,11 +1,16 @@
 package uk.ac.shu.ebusiness.rammdesigns
 
-class Cart {
 
+// Cart Class //
+
+
+class Cart {
 
 
 	Date dateCreated  // Timestamp: automatically populated by GORM //
 
+	// Attributes //
+	
 	User user
 	Product product
 

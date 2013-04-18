@@ -106,12 +106,12 @@ class CartController {
 
 
 
- // Here is the code to add products to the cart //
+ 	// Here is the code to add products to the cart //
 
     def cart() {
 
 
-// Here i save a copy of the product id so the user can be returned to the same page after item has been added to the cart //
+	// Here i save a copy of the product id so the user can be returned to the same page after item has been added to the cart //
 
 def returnpage = (params.product.id)
 
@@ -137,36 +137,19 @@ def returnpage = (params.product.id)
 
 def showcart() {
 
-//println(springSecurityService.principal)
-// def user = User.get(springSecurityService.principal.id)
-
 def result = [cart:Cart.findAllByUser(session.user)]
 result.total = 0
 result.cart.each { cartentry ->
 result.total+=cartentry.product.price
+
 }
   result
 
+
 }
 
 
-
-
-
-def showcart2() {
-  def crit = Product.createCriteria()
-  def products_in_cart = crit.list {
-    cart_entries {
-      user {
-        eq('username',session.user.username)
-      }
-    }
-  }
-  def result=[cart:products_in_cart]
-  return result;
-}
-
-	// Delete from cart //
+	// Functionality to delete from users cart //
 
     def cartdelete(Long id) {
         def cartInstance = Cart.get(id)

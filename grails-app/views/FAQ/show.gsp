@@ -69,23 +69,7 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${FAQInstance?.category}">
-				<li class="fieldcontain">
-					<span id="category-label" class="property-label"><g:message code="FAQ.category.label" default="Category:" /></span>
-					
-						<span class="property-value" aria-labelledby="category-label"><g:link controller="category" action="show" id="${FAQInstance?.category?.id}">${FAQInstance?.category?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${FAQInstance?.user}">
-				<li class="fieldcontain">
-					<span id="user-label" class="property-label"><g:message code="FAQ.user.label" default="Author:" /></span>
-					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${FAQInstance?.user?.id}">${FAQInstance?.user?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
+		
 			
 			</ol>
 			<g:form>

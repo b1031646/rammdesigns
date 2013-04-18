@@ -1,13 +1,5 @@
 package uk.ac.shu.ebusiness.rammdesigns
 
-// Imports to support validation //
-
-import org.springframework.validation.FieldError;
-import org.springframework.validation.ObjectError;
-import org.springframework.validation.ValidationUtils;
-import grails.validation.Validateable
-import org.springframework.validation.Errors
-@Validateable
 
 // User Class //
 
@@ -42,9 +34,9 @@ class User {
 	Set questions
 	Set cart_entries
 
-	static hasMany = [questions: FAQ, cart_entries: Cart]
+	static hasMany = [cart_entries: Cart]
 
-	static mappedBy = [questions: "user", cart_entries: "user"]
+	static mappedBy = [cart_entries: "user"]
 
 
  

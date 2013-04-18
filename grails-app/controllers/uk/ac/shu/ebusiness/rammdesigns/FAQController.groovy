@@ -4,6 +4,23 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class FAQController {
 
+	// Before Interceptor that restricts access to Admin users only //
+
+
+def beforeInterceptor = [action:this.&auth, 
+                           except:["all"]]
+
+  def auth() {
+    if( !(session?.user?.role == "Admin") ){
+      flash.message = "You must be an administrator to perform that task."
+      redirect(controller:"user", action:"login")
+      return false
+    }
+  }
+
+
+	// Code for scaffolded interfaces //
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -99,4 +116,20 @@ class FAQController {
             redirect(action: "show", id: id)
         }
     }
+	
+
+	// Show all the FAQ's //
+	
+    def all(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        [FAQInstanceList: FAQ.list(params)]
+    }
+
+
+
+
+
+
+
+
 }

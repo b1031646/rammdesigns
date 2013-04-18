@@ -137,6 +137,13 @@ padding-right:30px;
 display:inline;
 }
 
+p#orange_price{
+    font-size: 14px;
+    color: #D76F11;
+display:inline;
+font-weight:bold;
+}
+
 p#logintaglib{
     font-size: 14px;
     color: #4A96A6;
@@ -158,6 +165,48 @@ p#my_account {
 text-align: justify; 
 display:inline;
 }
+
+/* Custom FAQ/Category Div */
+
+.wrapper2 {
+	height: 64px;
+	width: 900px;
+}
+.wrapper2 #answer #a-picture {
+	width: 30px;
+}
+.wrapper2 #question #q-picture {
+	width: 30px;
+}
+.wrapper2 #question {
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+.wrapper2 #answer {
+	width: 32px;
+	height: 32px;
+	float: left;
+	clear: left;
+}
+.wrapper2 #questionField {
+	clear: right;
+	height: 32px;
+	float: left;
+	width: 868px;
+padding-top:3px;
+padding-left:0px;
+}
+.wrapper2 #answerField {
+	float: none;
+	height: 32px;
+	clear: right;
+	width: 868px;
+	margin-left: 32px;
+padding-top:0px;
+padding-left:0px;
+}
+
 
 
 /* Custom Product/Category Div */
@@ -460,7 +509,7 @@ div#loader {
 
 ul.main_navi {
     float: right;
-    width: 500px;
+    width: 565px;
     margin-top: 8px;
 }
 

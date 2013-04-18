@@ -32,6 +32,7 @@
 	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+	<li><g:link controller="FAQ" action="all" class="transition">FAQ</g:link></li>
 </ul>
 
 <div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
@@ -63,10 +64,8 @@
 
 <h4>Price: <g:formatNumber number="${productInstance.price}" type="currency" currencyCode="GBP"/></h4>
 
-
-<br>
 <g:if test="${session.user}">
-     
+     <br>
  <g:form controller="cart" action="cart" name="addtocart">
 
 
@@ -79,7 +78,7 @@
 </g:if>
         <h4>Category: <g:link controller="product" action="category" id="${params.category}" params="[category: "${productInstance.category}"]" ><g:fieldValue bean="${productInstance}" field="category"/></g:link></h4>
 <g:if test="${flash.message}">
-<div class="message_addcart" role="status">${flash.message}</div>
+<div class="message_addcart" role="status">${flash.message} | <g:link controller="cart" action="showcart" >View Cart</g:link> </div>
 </g:if>
 <g:if test="${session.user == null}">
    <g:form controller="user" action="login_product" name="loginForm">
@@ -120,6 +119,7 @@
 	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+	<li><g:link controller="FAQ" action="all" class="transition">FAQ</g:link></li>
     </ul>
 </div>
 

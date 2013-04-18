@@ -1,5 +1,8 @@
 package uk.ac.shu.ebusiness.rammdesigns
 
+
+// FAQ Class //
+
 class FAQ {
 
 
@@ -7,9 +10,9 @@ class FAQ {
 
 	String question	
 	String answer
+	String category = "General"
 
-	User user
-	Category category
+	
 
 // toString() returns the category name instead of the id to make the scaffolded interfaces easier to work with //
 
@@ -20,6 +23,7 @@ class FAQ {
     static constraints = {
 	question blank:false, unique:true;
 	answer blank:false;
+	category(inList:["General"])
     }
 	
 

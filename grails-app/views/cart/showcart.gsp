@@ -31,6 +31,7 @@
 	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+	<li><g:link controller="FAQ" action="all" class="transition">FAQ</g:link></li>
 </ul>
 
 <div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
@@ -110,6 +111,7 @@
 <p id="cart_details_insert"><g:formatNumber number="${total}" type="currency" currencyCode="GBP"/></p><p id="cart_details">Total:</p>
 
 
+
 </p>
 </b>
 <br>
@@ -141,6 +143,7 @@
 	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+	<li><g:link controller="FAQ" action="all" class="transition">FAQ</g:link></li>
     </ul>
 
 </div>

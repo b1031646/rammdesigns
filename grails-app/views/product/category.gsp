@@ -31,6 +31,7 @@
 	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+	<li><g:link controller="FAQ" action="all" class="transition">FAQ</g:link></li>
 </ul>
 
 <div onmousedown="return false"><g:img alt="RAMM:Designs" class="logo" dir="images" file="img/logo.png" /></div>
@@ -75,7 +76,7 @@
   <div id="imageTitle"><b><g:link action="detail" id="${testInstance.id}">${fieldValue(bean: testInstance, field: "productName")}</g:link></b></div>
   <div id="description"><p>${fieldValue(bean: testInstance, field: "productDescription")}</p>
 </div>
-  <div id="moreInfo">£${fieldValue(bean: testInstance, field: "price")}<br>
+  <div id="moreInfo"><p id="orange_price">£${fieldValue(bean: testInstance, field: "price")}</p><br>
 
 <g:link action="detail" id="${testInstance.id}"><g:img alt="" class="transition" dir="images/img/more_info/" file="more_info.png" /></g:link></div>
   <div id="price">
@@ -141,6 +142,7 @@
 	<li><g:link controller="home" action="about" class="transition">About</g:link></li>
         <li><g:link controller="home" action="team" class="transition">Meet Our Team</g:link></li>
         <li><g:link controller="home" action="contact" class="transition">Contact Us</g:link></li>
+	<li><g:link controller="FAQ" action="all" class="transition">FAQ</g:link></li>
     </ul>
 
 </div>

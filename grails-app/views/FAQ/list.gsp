@@ -59,9 +59,7 @@
 					
 						<g:sortableColumn property="answer" title="${message(code: 'FAQ.answer.label', default: 'Answer')}" />
 					
-						<th><g:message code="FAQ.category.label" default="Category" /></th>
-					
-						<th><g:message code="FAQ.user.label" default="User" /></th>
+						
 					
 					</tr>
 				</thead>
@@ -73,9 +71,7 @@
 					
 						<td>${fieldValue(bean: FAQInstance, field: "answer")}</td>
 					
-						<td>${fieldValue(bean: FAQInstance, field: "category")}</td>
-					
-						<td>${fieldValue(bean: FAQInstance, field: "user")}</td>
+						
 					
 					</tr>
 				</g:each>
