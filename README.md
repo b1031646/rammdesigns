@@ -22,4 +22,16 @@ Some info here about how to run the project<br>
 *The MySQL create database command should be create database rammdesignsdb default charset utf8 default collate utf8_bin; The character set encoding is important as the web application is capable of accepting UTF8 input.<br>
 <br>
 *The project is a groovy/grails project and needs an installed Java7 JDK and installed grails SDK (http://www.grails.org)<br>
-
+<br>
+Users and Roles
+===========
+All the user details including usernames and passwords can be found in the bootstrap class.<br>
+<br>
+*Admin User<br>
+*Username: admin<br>
+*Password: admin1<br>
+<br>
+*Standard User<br>
+*Username: alison<br>
+*Password: alison1<br>
+<br>
